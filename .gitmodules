@@ -1,0 +1,6 @@
+[submodule "oh-my-zsh"]
+	path = oh-my-zsh
+	url = https://github.com/aglorei/oh-my-zsh
+[submodule "slimzsh"]
+	path = slimzsh
+	url = https://github.com/changs/slimzsh
