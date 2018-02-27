@@ -1,0 +1,6 @@
+[core]
+        editor = vim
+        excludesfile = ~/.gitignore_global
+[user]
+        name = aglorei
+        email = aglorei88@gmail.com
