@@ -1,0 +1,15 @@
+#!/bin/bash -e
+
+: "${INSTALLER:=https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh}"
+: "${VIMDIR:=$HOME/.vim/bundles}"
+
+if [ -d $VIMDIR ]; then
+  echo "$VIMDIR already exists. Skipping dein installation."
+  exit
+fi
+
+echo "Creating $VIMDIR..."
+mkdir -p $VIMDIR
+echo "...done"
+
+curl -fsSL $INSTALLER | bash -s $VIMDIR
