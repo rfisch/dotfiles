@@ -4,3 +4,6 @@
 [submodule "slimzsh"]
 	path = slimzsh
 	url = https://github.com/changs/slimzsh
+[submodule "dotbot"]
+	path = dotbot
+	url = https://github.com/anishathalye/dotbot
