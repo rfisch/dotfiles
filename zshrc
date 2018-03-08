@@ -4,6 +4,8 @@ ZSH_THEME=""
 plugins=(git mercurial mercurial-mq rmd ss)
 
 source "$ZSH/oh-my-zsh.sh"
+
+# slimzsh
 source "$HOME/.slimzsh/slim.zsh"
 prompt_newline='%666v'
 PROMPT='%F{white}%* '$PROMPT
@@ -57,5 +59,8 @@ if command -v rbenv &>/dev/null; then
   [[ ":$PATH:" != *":$HOME/.rbenv/shims:"* ]] && eval "$(rbenv init -)"
 fi
 
+# fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# python2 brew keg
 [ -d /usr/local/opt/python@2/bin ] && PATH="/usr/local/opt/python@2/bin:$PATH"
