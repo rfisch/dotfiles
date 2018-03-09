@@ -31196,13 +31196,13 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>1169 110 445 103 0 0 1680 1028 </string>
+	<string>1169 33 445 77 0 0 1680 1028 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>530 476 620 392 0 0 1680 1027 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>348 172 796 473 0 0 1680 1028 </string>
+	<string>348 134 796 473 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1956 1028 0 0 1680 1028 </string>
+	<string>0 133 1676 895 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>919 1050 1920 1058 918 1050 1920 1058 </string>
 	<key>New Bookmarks</key>
@@ -31807,13 +31807,13 @@
 			<key>Name</key>
 			<string>main</string>
 			<key>Non Ascii Font</key>
-			<string>InconsolataForPowerline-g 10</string>
+			<string>FiraMonoForPowerline-Medium 10</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Non-ASCII Ligatures</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>InconsolataForPowerline-g 11</string>
+			<string>FiraMonoForPowerline-Medium 11</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
