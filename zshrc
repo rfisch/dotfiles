@@ -26,7 +26,7 @@ if [[ ${OSTYPE} == "linux-gnu" ]]; then
 fi
 
 # list
-alias ll="ls -alHF"
+alias ll="ls -alhHF"
 
 # grep
 alias egrep="egrep --color"
