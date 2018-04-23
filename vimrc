@@ -21,11 +21,6 @@ if dein#load_state('~/.vim/bundles')
   call dein#add('airblade/vim-gitgutter')
   call dein#add('tpope/vim-surround')
 
-  " Add OmniSharp plugins.
-  call dein#add('SirVer/ultisnips')
-  call dein#add('honza/vim-snippets')
-  call dein#add('OmniSharp/omnisharp-vim')
-
   call dein#end()
   call dein#save_state()
 endif
@@ -140,45 +135,6 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 2
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-
-" OmniSharp
-let g:OmniSharp_server_path = '~/src/omnisharp-osx/omnisharp/OmniSharp.exe'
-let g:OmniSharp_timeout = 1
-set completeopt=longest,menuone,preview
-set previewheight=5
-let g:syntastic_cs_checkers = ['code_checker']
-
-augroup omnisharp_commands
-    autocmd!
-    " Automatic syntax check on events (TextChanged requires Vim 7.4).
-    autocmd BufEnter,TextChanged,InsertLeave *.cs SyntasticCheck
-
-    " Automatically add new cs files to the nearest project on save.
-    autocmd BufWritePost *.cs call OmniSharp#AddToProject()
-
-    " Show type information automatically when the cursor stops moving.
-    autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
-
-    " The following commands are contextual, based on the cursor position.
-    autocmd FileType cs nnoremap <buffer> gd :OmniSharpGotoDefinition<CR>
-    autocmd FileType cs nnoremap <buffer> <Leader>fi :OmniSharpFindImplementations<CR>
-    autocmd FileType cs nnoremap <buffer> <Leader>ft :OmniSharpFindType<CR>
-    autocmd FileType cs nnoremap <buffer> <Leader>fs :OmniSharpFindSymbol<CR>
-    autocmd FileType cs nnoremap <buffer> <Leader>fu :OmniSharpFindUsages<CR>
-
-    " Finds members in the current buffer.
-    autocmd FileType cs nnoremap <buffer> <Leader>fm :OmniSharpFindMembers<CR>
-
-    " Cursor can be anywhere on the line containing an issue.
-    autocmd FileType cs nnoremap <buffer> <Leader>x  :OmniSharpFixIssue<CR>
-    autocmd FileType cs nnoremap <buffer> <Leader>fx :OmniSharpFixUsings<CR>
-    autocmd FileType cs nnoremap <buffer> <Leader>tt :OmniSharpTypeLookup<CR>
-    autocmd FileType cs nnoremap <buffer> <Leader>dc :OmniSharpDocumentation<CR>
-
-    " Navigate up and down by method/property/field.
-    autocmd FileType cs nnoremap <buffer> <C-k> :OmniSharpNavigateUp<CR>
-    autocmd FileType cs nnoremap <buffer> <C-j> :OmniSharpNavigateDown<CR>
-augroup END
 
 " this machine config
 if filereadable(expand("~/.vimrc.local"))
