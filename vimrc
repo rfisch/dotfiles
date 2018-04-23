@@ -21,6 +21,11 @@ if dein#load_state('~/.vim/bundles')
   call dein#add('airblade/vim-gitgutter')
   call dein#add('tpope/vim-surround')
 
+  " Add python plugins.
+  call dein#add('SirVer/ultisnips')
+  call dein#add('honza/vim-snippets')
+  call dein#add('Valloric/YouCompleteMe')
+
   call dein#end()
   call dein#save_state()
 endif
@@ -109,6 +114,10 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 2
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" UltiSnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsEditSplit="vertical"
 
 " this machine config
 if filereadable(expand("~/.vimrc.local"))
