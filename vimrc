@@ -9,19 +9,27 @@ if dein#load_state('~/.vim/bundles')
   " Let dein manage dein.
   call dein#add('~/.vim/bundles/repos/github.com/Shougo/dein.vim')
 
-  " Add plugins.
-  call dein#add('kien/ctrlp.vim')
-  call dein#add('Raimondi/delimitMate')
-  call dein#add('PProvost/vim-ps1')
-  call dein#add('scrooloose/syntastic')
+  " Add gui plugins.
   call dein#add('bling/vim-airline')
   call dein#add('vim-airline/vim-airline-themes')
   call dein#add('flazz/vim-colorschemes')
+
+  " Add navigation plugins.
+  call dein#add('kien/ctrlp.vim')
+
+  " Add syntax plugins.
+  call dein#add('scrooloose/syntastic')
+  call dein#add('PProvost/vim-ps1')
+
+  " Add text manipulation plugins.
+  call dein#add('Raimondi/delimitMate')
   call dein#add('tpope/vim-commentary')
-  call dein#add('airblade/vim-gitgutter')
   call dein#add('tpope/vim-surround')
 
-  " Add python plugins.
+  " Add version control plugins.
+  call dein#add('airblade/vim-gitgutter')
+
+  " Add snippet plugins.
   call dein#add('SirVer/ultisnips')
   call dein#add('honza/vim-snippets')
   call dein#add('Valloric/YouCompleteMe')
