@@ -42,43 +42,33 @@ set autoindent
 set backspace=indent,eol,start
 set complete-=i
 set showmatch
-set showmode
+
 set smarttab
 set nrformats-=octal
-set shiftround
 set ttimeout
 set ttimeoutlen=50
-set incsearch
-set laststatus=2
-set ruler
-set showcmd
-set wildmenu
-set autoread
+
 set encoding=utf-8
+set shiftround
 set tabstop=2 shiftwidth=2 expandtab
 set listchars=tab:░░,trail:▓
 set list
-set relativenumber
-set number
-set hlsearch
+
+set incsearch
 set ignorecase
 set smartcase
+set hlsearch
 
-" Use <C-L> to clear the highlighting of :set hlsearch.
-if maparg('<C-L>', 'n') ==# ''
-  nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
-endif
+set number
+set ruler
+set relativenumber
 
-" C-U in insert mode deletes a lot. Use CTRL-G u to first break undo, so that
-" you can undo C-U after inserting a line break.
-inoremap <C-U> <C-G>u<C-U>
+set showcmd
+set showmode
+set laststatus=2
+set wildmenu
 
-" In many terminal emulators the mouse works just fine, thus enable it.
-if has('mouse')
-  set mouse=a
-endif
-
-" Do not history when leavy buffer.
+set autoread
 set hidden
 set nobackup
 set nowritebackup
@@ -86,31 +76,15 @@ set noswapfile
 set fileformats=unix,dos,mac
 set completeopt=menuone,longest,preview
 
-" Basic shortcuts definitions, most in visual mode / selection (v or ⇧ v)
-
-" Indent / deindent after selecting the text with (⇧ v), (.) to repeat.
-vnoremap <Tab> >
-vnoremap <S-Tab> <
-
-" Comment / decomment & normal comment behavior
-vmap <C-m> gc
-
-" Tabs
-nnoremap <C-b>  :tabprevious<CR>
-inoremap <C-b>  <Esc>:tabprevious<CR>i
-nnoremap <C-n>  :tabnext<CR>
-inoremap <C-n>  <Esc>:tabnext<CR>i
-nnoremap <C-t>  :tabnew<CR>
-inoremap <C-t>  <Esc>:tabnew<CR>i
-nnoremap <C-k>  :tabclose<CR>
-inoremap <C-k>  <Esc>:tabclose<CR>i
+" In many terminal emulators the mouse works just fine, thus enable it.
+if has('mouse')
+  set mouse=a
+endif
 
 " Lazy ':'
 map \ :
 
 let mapleader = ','
-nnoremap <Leader>p :set paste<CR>
-nnoremap <Leader>o :set nopaste<CR>
 
 " Plugin configurations
 
