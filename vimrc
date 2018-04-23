@@ -15,7 +15,7 @@ if dein#load_state('~/.vim/bundles')
   call dein#add('flazz/vim-colorschemes')
 
   " Add navigation plugins.
-  call dein#add('kien/ctrlp.vim')
+  call dein#add('ctrlpvim/ctrlp.vim')
 
   " Add syntax plugins.
   call dein#add('scrooloose/syntastic')
