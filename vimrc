@@ -87,7 +87,7 @@ set nobackup
 set nowritebackup
 set noswapfile
 set fileformats=unix,dos,mac
-set completeopt=menuone,longest,preview
+set completeopt=longest,menuone,preview
 
 " In many terminal emulators the mouse works just fine, thus enable it.
 if has('mouse')
