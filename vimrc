@@ -91,7 +91,7 @@ set nobackup
 set nowritebackup
 set noswapfile
 set fileformats=unix,dos,mac
-set completeopt=longest,menuone,preview
+set completeopt=longest,menuone
 
 " In many terminal emulators the mouse works just fine, thus enable it.
 if has('mouse')
@@ -140,6 +140,7 @@ let g:UltiSnipsEditSplit = "vertical"
 
 " OmniSharp
 let g:OmniSharp_server_use_mono = 1
+let g:OmniSharp_server_path = '~/src/omnisharp.http-osx/omnisharp/OmniSharp.exe'
 let g:OmniSharp_selector_ui = 'ctrlp'
 let g:syntastic_cs_checkers = ['code_checker']
 
@@ -147,7 +148,7 @@ augroup omnisharp_commands
     autocmd!
 
     " Synchronous build (blocks Vim)
-    autocmd FileType cs nnoremap <buffer> <F5> :wa!<CR>:OmniSharpBuild<CR>
+    autocmd FileType cs nnoremap <buffer> <Leader>ab :wa!<CR>:OmniSharpBuild<CR>
 
     " Automatic syntax check on events (TextChanged requires Vim 7.4)
     autocmd BufEnter,TextChanged,InsertLeave *.cs SyntasticCheck
