@@ -187,7 +187,6 @@ xnoremap <Leader><Space> :call OmniSharp#GetCodeActions('visual')<CR>
 
 " Rename with dialog
 nnoremap <Leader>nm :OmniSharpRename<CR>
-nnoremap <F2> :OmniSharpRename<CR>
 " Rename without dialog - with cursor on the symbol to rename: `:Rename newname`
 command! -nargs=1 Rename :call OmniSharp#RenameTo("<args>")
 
@@ -203,6 +202,9 @@ nnoremap <Leader>sp :OmniSharpStopServer<CR>
 
 " Add syntax highlighting for types and interfaces
 nnoremap <Leader>th :OmniSharpHighlightTypes<CR>
+
+" Enable snippet completion, requires completeopt-=preview
+let g:OmniSharp_want_snippet = 1
 
 " this machine config
 if filereadable(expand("~/.vimrc.local"))
