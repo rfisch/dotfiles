@@ -9,34 +9,34 @@ if dein#load_state('~/.vim/bundles')
   " Let dein manage dein.
   call dein#add('~/.vim/bundles/repos/github.com/Shougo/dein.vim')
 
-  " Add gui plugins.
-  call dein#add('bling/vim-airline')
-  call dein#add('vim-airline/vim-airline-themes')
-  call dein#add('flazz/vim-colorschemes')
-
-  " Add navigation plugins.
+  " Utility
   call dein#add('ctrlpvim/ctrlp.vim')
 
-  " Add syntax plugins.
-  call dein#add('scrooloose/syntastic')
-  call dein#add('PProvost/vim-ps1')
-
-  " Add text manipulation plugins.
+  " Generic Programming
   call dein#add('Raimondi/delimitMate')
   call dein#add('tpope/vim-commentary')
   call dein#add('tpope/vim-surround')
 
-  " Add version control plugins.
-  call dein#add('airblade/vim-gitgutter')
-
-  " Add snippet plugins.
+  " Snippets
   call dein#add('ervandew/supertab')
   call dein#add('SirVer/ultisnips')
   call dein#add('honza/vim-snippets')
   call dein#add('Valloric/YouCompleteMe')
 
-  " Add IDE plugins.
+  " C# / dotnet
   call dein#add('OmniSharp/omnisharp-vim')
+
+  " Syntax
+  call dein#add('scrooloose/syntastic')
+  call dein#add('PProvost/vim-ps1')
+
+  " Version Control
+  call dein#add('airblade/vim-gitgutter')
+
+  " Interface
+  call dein#add('bling/vim-airline')
+  call dein#add('vim-airline/vim-airline-themes')
+  call dein#add('flazz/vim-colorschemes')
 
   call dein#end()
   call dein#save_state()
