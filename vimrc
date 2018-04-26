@@ -49,12 +49,12 @@ if dein#check_install()
   call dein#install()
 endif
 
-" Color themes.
+" Theme
 let g:hybrid_custom_term_colors = 1
 colorscheme hybrid
 set background=dark
 
-" Use :help 'option' to see the documentation for the given option.
+" Use :help 'option' for documentation
 set autoindent
 set backspace=indent,eol,start
 set complete-=i
@@ -93,7 +93,7 @@ set noswapfile
 set fileformats=unix,dos,mac
 set completeopt=longest,menuone
 
-" In many terminal emulators the mouse works just fine, thus enable it.
+" In many terminal emulators the mouse works just fine, thus enable it
 if has('mouse')
   set mouse=a
 endif
@@ -127,9 +127,11 @@ let g:syntastic_auto_loc_list = 2
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-" YCM and supertab
+" YCM
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+
+" supertab
 let g:SuperTabDefaultCompletionType = '<C-n>'
 
 " UltiSnips
@@ -182,17 +184,20 @@ augroup END
 
 " Contextual code actions (uses fzf, CtrlP or unite.vim when available)
 nnoremap <Leader><Space> :OmniSharpGetCodeActions<CR>
+
 " Run code actions with text selected in visual mode to extract method
 xnoremap <Leader><Space> :call OmniSharp#GetCodeActions('visual')<CR>
 
 " Rename with dialog
 nnoremap <Leader>nm :OmniSharpRename<CR>
+
 " Rename without dialog - with cursor on the symbol to rename: `:Rename newname`
 command! -nargs=1 Rename :call OmniSharp#RenameTo("<args>")
 
 " Force OmniSharp to reload the solution. Useful when switching branches etc.
 nnoremap <Leader>rl :OmniSharpReloadSolution<CR>
 nnoremap <Leader>cf :OmniSharpCodeFormat<CR>
+
 " Load the current .cs file to the nearest project
 nnoremap <Leader>tp :OmniSharpAddToProject<CR>
 
