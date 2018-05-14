@@ -2,6 +2,12 @@ tap "homebrew/core"
 tap "homebrew/bundle"
 tap "caskroom/versions"
 tap "caskroom/cask"
+# GNU database manager
+brew "gdbm"
+# Interpreted, interactive, object-oriented programming language
+brew "python"
+# Microsoft Azure CLI 2.0
+brew "azure-cli"
 # Cross-platform make
 brew "cmake"
 # Configurable talking characters in ASCII art
@@ -14,8 +20,6 @@ brew "fasd"
 brew "figlet"
 # Command-line fuzzy finder written in Go
 brew "fzf"
-# GNU database manager
-brew "gdbm"
 # Distributed revision control system
 brew "git"
 # Improved top (interactive process viewer)
@@ -36,8 +40,6 @@ brew "node"
 brew "p7zip"
 # Show ps output as a tree
 brew "pstree"
-# Interpreted, interactive, object-oriented programming language
-brew "python"
 # Ruby version manager
 brew "rbenv"
 # Search tool like grep and The Silver Searcher
