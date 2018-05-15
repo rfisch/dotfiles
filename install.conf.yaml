@@ -18,4 +18,4 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - [init/install_dein, Installing dein]
+  - [vim/install_dein, Installing dein]
