@@ -4,6 +4,8 @@ tap "caskroom/versions"
 tap "caskroom/cask"
 # GNU database manager
 brew "gdbm"
+# Automate deployment, configuration, and upgrading
+brew "ansible"
 # Interpreted, interactive, object-oriented programming language
 brew "python"
 # Microsoft Azure CLI 2.0
@@ -46,6 +48,8 @@ brew "rbenv"
 brew "ripgrep"
 # User interface to the TELNET protocol (built from macOS Sierra sources)
 brew "telnet"
+# Tool to build, change, and version infrastructure
+brew "terraform"
 # Terminal multiplexer
 brew "tmux"
 # Lightweight BitTorrent client
@@ -64,6 +68,7 @@ cask "docker"
 cask "firefoxdeveloperedition"
 cask "gpgtools"
 cask "java"
+cask "macpass"
 cask "mactex"
 cask "microsoft-teams"
 cask "rocket"
