@@ -1,6 +1,0 @@
-[core]
-        editor = vim
-        excludesfile = ~/.gitignore_global
-[user]
-        name = Tienlong Pham
-        email = tpham@seismic.com
