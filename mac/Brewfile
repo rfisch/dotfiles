@@ -20,8 +20,6 @@ brew "doctl"
 brew "fasd"
 # Banner-like program prints strings as ASCII art
 brew "figlet"
-# Command-line fuzzy finder written in Go
-brew "fzf"
 # Distributed revision control system
 brew "git"
 # Improved top (interactive process viewer)
