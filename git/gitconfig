@@ -2,6 +2,6 @@
         editor = vim
         excludesfile = ~/.gitignore_global
 [user]
-        name = aglorei
+        name = Tienlong Pham
         email = 10876966+aglorei@users.noreply.github.com
         signingkey = ED8839A2
