@@ -11,7 +11,6 @@ cd ~/dotfiles
 ```
 
 * Init and update dotfile submodules
-* Creates a link to [gitignore_global](default/gitignore_global) in $HOME
 
 ## Arch Linux Configuration
 
@@ -20,6 +19,15 @@ cd ~/dotfiles
 ```
 
 * Installs packages from [list backup](arch/pkglist.txt) with pacman
+
+## Git Configuration
+
+```sh
+./install git
+```
+
+* Creates a link to [gitignore_global](default/gitignore_global) in $HOME
+* Creates a link to _my_ (personal) [gitconfig](default/gitconfig) in $HOME
 
 ## Mac Configuration
 
@@ -35,6 +43,7 @@ cd ~/dotfiles
 ./install utils
 ```
 
+* Installs [fzf](https://github.com/junegunn/fzf) utility
 * Creates a link to [tmux.conf](utils/tmux.conf) in $HOME
 
 ## Vim Configuration
