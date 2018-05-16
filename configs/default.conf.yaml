@@ -6,8 +6,8 @@
 
 - link:
     ~/.gitignore_global: default/gitignore_global
-    ~/.oh-my-zsh: oh-my-zsh
-    ~/.slimzsh: slimzsh
+    ~/.oh-my-zsh: default/oh-my-zsh
+    ~/.slimzsh: default/slimzsh
     ~/.tmux.conf: default/tmux.conf
     ~/.zshrc: default/zshrc
 
