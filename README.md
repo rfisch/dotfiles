@@ -17,9 +17,7 @@ cd ~/dotfiles
 ## Zsh Configuration
 
 ```sh
-git clone --recurse-submodules https://github.com/aglorei/dotfiles ~/dotfiles
-cd ~/dotfiles
-./install
+./install zsh
 ```
 
 * Installs [oh-my-zsh](https://github.com/aglorei/oh-my-zsh)
