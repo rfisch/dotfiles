@@ -1,0 +1,2 @@
+- shell:
+  - [arch/install_packages, Installing packages]
