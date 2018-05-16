@@ -1,0 +1,13 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+
+- clean: ['~']
+
+- link:
+    ~/.config/nvim/init.vim: vim/init.vim
+    ~/.vimrc: vim/vimrc
+
+- shell:
+  - [vim/install_dein, Installing dein]
