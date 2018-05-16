@@ -6,7 +6,6 @@
 
 - link:
     ~/.gitignore_global: default/gitignore_global
-    ~/.tmux.conf: default/tmux.conf
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
