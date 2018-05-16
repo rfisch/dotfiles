@@ -1,9 +1,9 @@
 [submodule "dotbot"]
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
-[submodule "default/oh-my-zsh"]
-	path = default/oh-my-zsh
-	url = https://github.com/aglorei/oh-my-zsh
-[submodule "default/slimzsh"]
-	path = default/slimzsh
+[submodule "zsh/slimzsh"]
+	path = zsh/slimzsh
 	url = https://github.com/changs/slimzsh
+[submodule "zsh/oh-my-zsh"]
+	path = zsh/oh-my-zsh
+	url = https://github.com/aglorei/oh-my-zsh

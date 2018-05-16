@@ -1,0 +1,10 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.oh-my-zsh: zsh/oh-my-zsh
+    ~/.slimzsh: zsh/slimzsh
+    ~/.zshrc: zsh/zshrc
