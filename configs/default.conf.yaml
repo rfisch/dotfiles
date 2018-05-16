@@ -5,11 +5,11 @@
 - clean: ['~']
 
 - link:
-    ~/.gitignore_global: gitignore_global
+    ~/.gitignore_global: default/gitignore_global
     ~/.oh-my-zsh: oh-my-zsh
     ~/.slimzsh: slimzsh
-    ~/.tmux.conf: tmux.conf
-    ~/.zshrc: zshrc
+    ~/.tmux.conf: default/tmux.conf
+    ~/.zshrc: default/zshrc
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
