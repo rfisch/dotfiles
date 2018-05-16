@@ -5,4 +5,8 @@
 - clean: ['~']
 
 - link:
+    ~/.fzf: utils/fzf
     ~/.tmux.conf: utils/tmux.conf
+
+- shell:
+  - [utils/install_fzf, Installing fzf]
