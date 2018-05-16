@@ -1,7 +1,9 @@
 [core]
-        editor = vim
-        excludesfile = ~/.gitignore_global
+  editor = vim
+  excludesfile = ~/.gitignore_global
 [user]
-        name = Tienlong Pham
-        email = 10876966+aglorei@users.noreply.github.com
-        signingkey = ED8839A2
+  name = Tienlong Pham
+  email = 10876966+aglorei@users.noreply.github.com
+  signingkey = ED8839A2
+[commit]
+  gpgsign = true
