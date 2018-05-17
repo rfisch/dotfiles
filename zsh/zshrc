@@ -21,6 +21,9 @@ if [[ ${OSTYPE} =~ "darwin" ]]; then
 fi
 
 if [[ ${OSTYPE} == "linux-gnu" ]]; then
+  # export GPG tty
+  export GPG=$(tty)
+
   # list
   alias ls="ls --color"
 fi
