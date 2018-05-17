@@ -22,7 +22,7 @@ fi
 
 if [[ ${OSTYPE} == "linux-gnu" ]]; then
   # export GPG tty
-  export GPG=$(tty)
+  export GPG_TTY=$(tty)
 
   # list
   alias ls="ls --color"
