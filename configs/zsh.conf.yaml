@@ -5,7 +5,6 @@
 - clean: ['~']
 
 - link:
-    ~/.config/base16-shell: zsh/base16-shell
     ~/.oh-my-zsh: zsh/oh-my-zsh
     ~/.slimzsh: zsh/slimzsh
     ~/.zshrc: zsh/zshrc

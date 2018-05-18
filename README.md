@@ -62,7 +62,6 @@ cd ~/dotfiles
 ./install zsh
 ```
 
-* Installs [base16-shell](https://github.com/chriskempson/base16-shell)
 * Installs [oh-my-zsh](https://github.com/aglorei/oh-my-zsh)
 * Installs [slimzsh](https://github.com/changs/slimzsh)
 * Creates a link to [zshrc](zsh/zshrc) in $HOME
