@@ -31,12 +31,15 @@ if dein#load_state('~/.vim/bundles')
   call dein#add('PProvost/vim-ps1')
 
   " Version Control
+  call dein#add('tpope/vim-fugitive')
   call dein#add('airblade/vim-gitgutter')
 
   " Interface
-  call dein#add('bling/vim-airline')
+  call dein#add('vim-airline/vim-airline')
   call dein#add('vim-airline/vim-airline-themes')
-  call dein#add('flazz/vim-colorschemes')
+
+  " Colorschemes
+  call dein#add('chriskempson/base16-vim')
 
   call dein#end()
   call dein#save_state()
@@ -50,8 +53,13 @@ if dein#check_install()
 endif
 
 " Theme
-let g:hybrid_custom_term_colors = 1
-colorscheme hybrid
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+else
+  colorscheme default
+endif
+
 set background=dark
 
 " Use :help 'option' for documentation
@@ -109,9 +117,10 @@ let mapleader = ','
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 
 " vim-airline
-let g:airline_theme='hybrid'
+let g:airline_theme='base16_default'
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline#extensions#branch#enabled = 1
 let g:airline_powerline_fonts = 1
 
 " vim-gitgutter
