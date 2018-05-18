@@ -31,6 +31,7 @@ if dein#load_state('~/.vim/bundles')
   call dein#add('PProvost/vim-ps1')
 
   " Version Control
+  call dein#add('tpope/vim-fugitive')
   call dein#add('airblade/vim-gitgutter')
 
   " Interface
