@@ -5,6 +5,10 @@ plugins=(git mercurial mercurial-mq rmd ss)
 
 source "$ZSH/oh-my-zsh.sh"
 
+# base16
+BASE16_SHELL=$HOME/.config/base16-shell/
+[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+
 # slimzsh
 source "$HOME/.slimzsh/slim.zsh"
 prompt_newline='%666v'
