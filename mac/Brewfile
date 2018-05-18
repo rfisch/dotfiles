@@ -1,13 +1,11 @@
-tap "homebrew/core"
-tap "homebrew/bundle"
-tap "caskroom/versions"
 tap "caskroom/cask"
-# GNU database manager
-brew "gdbm"
+tap "caskroom/versions"
+tap "homebrew/bundle"
+tap "homebrew/core"
+tap "crisidev/chunkwm"
+tap "mopidy/mopidy"
 # Automate deployment, configuration, and upgrading
 brew "ansible"
-# Interpreted, interactive, object-oriented programming language
-brew "python"
 # Microsoft Azure CLI 2.0
 brew "azure-cli"
 # Cross-platform make
@@ -20,14 +18,26 @@ brew "doctl"
 brew "fasd"
 # Banner-like program prints strings as ASCII art
 brew "figlet"
+# Infamous electronic fortune-cookie generator
+brew "fortune"
 # Distributed revision control system
 brew "git"
+# GNU database manager
+brew "gdbm"
+# GNU Pretty Good Privacy (PGP) package
+brew "gnupg"
 # Improved top (interactive process viewer)
 brew "htop"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
+# Production Grade K8s Installation, Upgrades, and Management
+brew "kops"
+# Multi-platform support library with a focus on asynchronous I/O
+brew "libuv"
+# Java-based project management
+brew "maven"
 # Cross platform, open source .NET development framework
 brew "mono"
 # Fast, highly customisable system info script
@@ -38,10 +48,18 @@ brew "neovim"
 brew "node"
 # 7-Zip (high compression file archiver) implementation
 brew "p7zip"
+# Tool for creating identical machine images for multiple platforms
+brew "packer"
 # Pinentry for GPG on Mac
 brew "pinentry-mac"
+# Animated pipes terminal screensaver
+brew "pipes-sh"
 # Show ps output as a tree
 brew "pstree"
+# Interpreted, interactive, object-oriented programming language
+brew "python"
+# Interpreted, interactive, object-oriented programming language
+brew "python@2"
 # Ruby version manager
 brew "rbenv"
 # Search tool like grep and The Silver Searcher
@@ -60,22 +78,29 @@ brew "tree"
 brew "tty-clock"
 # Vi 'workalike' with many additional features
 brew "vim", args: ["with-python@2"]
+# Internet file retriever
+brew "wget"
 # UNIX shell (command interpreter)
 brew "zsh"
 cask "alfred"
-cask "authy-desktop"
+cask "authy"
 cask "docker"
-cask "firefoxdeveloperedition"
-cask "gpgtools"
+cask "dotnet"
+cask "dotnet-sdk"
 cask "java"
 cask "macpass"
 cask "mactex"
+cask "microsoft-office"
 cask "microsoft-teams"
+cask "mono-mdk"
 cask "rocket"
 cask "signal"
+cask "skype-for-business"
 cask "spotify"
+cask "virtualbox"
 cask "vlc"
+cask "caskroom/versions/firefox-developer-edition"
 cask "caskroom/versions/google-chrome-beta"
 cask "caskroom/versions/iterm2-beta"
+cask "caskroom/versions/microsoft-remote-desktop-beta"
 cask "caskroom/versions/slack-beta"
-cask "caskroom/versions/virtualbox-beta"
