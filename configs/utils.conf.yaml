@@ -9,4 +9,4 @@
     ~/.tmux.conf: utils/tmux.conf
 
 - shell:
-  - [utils/install_fzf, Installing fzf]
+  - [scripts/install_fzf, Installing fzf]
