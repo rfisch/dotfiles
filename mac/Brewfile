@@ -1,11 +1,15 @@
-tap "caskroom/cask"
-tap "caskroom/versions"
-tap "homebrew/bundle"
-tap "homebrew/core"
 tap "crisidev/chunkwm"
-tap "mopidy/mopidy"
+tap "homebrew/core"
+tap "homebrew/bundle"
+tap "caskroom/versions"
+tap "caskroom/cask"
+cask "java"
+# GNU database manager
+brew "gdbm"
 # Automate deployment, configuration, and upgrading
 brew "ansible"
+# Interpreted, interactive, object-oriented programming language
+brew "python"
 # Microsoft Azure CLI 2.0
 brew "azure-cli"
 # Cross-platform make
@@ -22,8 +26,6 @@ brew "figlet"
 brew "fortune"
 # Distributed revision control system
 brew "git"
-# GNU database manager
-brew "gdbm"
 # GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
 # Improved top (interactive process viewer)
@@ -34,8 +36,6 @@ brew "jq"
 brew "kubernetes-cli"
 # Production Grade K8s Installation, Upgrades, and Management
 brew "kops"
-# Multi-platform support library with a focus on asynchronous I/O
-brew "libuv"
 # Java-based project management
 brew "maven"
 # Cross platform, open source .NET development framework
@@ -56,10 +56,6 @@ brew "pinentry-mac"
 brew "pipes-sh"
 # Show ps output as a tree
 brew "pstree"
-# Interpreted, interactive, object-oriented programming language
-brew "python"
-# Interpreted, interactive, object-oriented programming language
-brew "python@2"
 # Ruby version manager
 brew "rbenv"
 # Search tool like grep and The Silver Searcher
@@ -87,7 +83,6 @@ cask "authy"
 cask "docker"
 cask "dotnet"
 cask "dotnet-sdk"
-cask "java"
 cask "macpass"
 cask "mactex"
 cask "microsoft-office"
