@@ -4,9 +4,7 @@ FZF_DIR="$HOME/.fzf"
 
 # Command-line fuzzy finder written in Go
 if [ -d $FZF_DIR ]; then
-  pushd $FZF_DIR > /dev/null
-  git checkout master
-  git pull
+  pushd $FZF_DIR
   ./install --all
-  popd > /dev/null
+  popd
 fi

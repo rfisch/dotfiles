@@ -10,4 +10,4 @@
     ~/.vimrc: vim/vimrc
 
 - shell:
-  - [vim/install_dein, Installing dein]
+  - [scripts/install_dein, Installing dein]

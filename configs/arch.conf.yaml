@@ -1,2 +1,2 @@
 - shell:
-  - [arch/install_packages, Installing packages]
+  - [sudo pacman -S --needed - < arch/pkglist.txt, Installing packages]
