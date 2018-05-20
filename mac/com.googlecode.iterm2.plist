@@ -31224,13 +31224,11 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>410 364 620 392 0 0 1440 878 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>82 384 796 473 0 0 1440 900 </string>
+	<string>271 388 796 473 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>139 393 500 380 0 0 1440 900 </string>
+	<string>58 174 1070 670 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>321 103 1070 670 0 0 1440 900 </string>
-	<key>NSWindow Frame iTerm Window 2</key>
-	<string>197 52 580 410 0 0 1440 900 </string>
+	<string>788 234 580 433 0 0 1440 900 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -31839,7 +31837,7 @@
 			<key>Non-ASCII Ligatures</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>ProggyCleanTTSZNerdFontCompleteM- 14</string>
+			<string>DejaVuSansMonoPowerline 11</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -32006,8 +32004,6 @@
 			<false/>
 			<key>Use Italic Font</key>
 			<true/>
-			<key>Use Non-ASCII Font</key>
-			<false/>
 			<key>Vertical Spacing</key>
 			<real>1</real>
 			<key>Visual Bell</key>
@@ -32627,7 +32623,7 @@
 			<key>Non-ASCII Ligatures</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>ProggyCleanTTSZNerdFontCompleteM- 14</string>
+			<string>DejaVuSansMonoPowerline 11</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prevent Opening in a Tab</key>
@@ -32796,8 +32792,6 @@
 			<false/>
 			<key>Use Italic Font</key>
 			<true/>
-			<key>Use Non-ASCII Font</key>
-			<false/>
 			<key>Vertical Spacing</key>
 			<real>1</real>
 			<key>Visual Bell</key>
@@ -32886,7 +32880,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-05-19T20:39:13Z</date>
+	<date>2018-05-18T00:57:10Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
