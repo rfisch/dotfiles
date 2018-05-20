@@ -69,12 +69,6 @@
 # launch a new terminal instance when in either 'default' or 'test' mode
 # default, test < cmd - return : open -na /Applications/Terminal.app
 
-# open terminal, blazingly fast compared to iTerm/Hyper
-cmd - return : open -na /Applications/Kitty.app
-
-# open qutebrowser
-cmd + shift - return : ~/Scripts/qtb.sh
-
 # close focused window
 alt - w : chunkc tiling::window --close
 
@@ -83,9 +77,6 @@ alt - h : chunkc tiling::window --focus west
 alt - j : chunkc tiling::window --focus south
 alt - k : chunkc tiling::window --focus north
 alt - l : chunkc tiling::window --focus east
-
-cmd - j : chunkc tiling::window --focus prev
-cmd - k : chunkc tiling::window --focus next
 
 # equalize size of windows
 shift + alt - 0 : chunkc tiling::desktop --equalize
@@ -123,15 +114,15 @@ shift + alt - 5 : chunkc tiling::window --send-to-desktop 5
 shift + alt - 6 : chunkc tiling::window --send-to-desktop 6
 
 # send window to desktop and follow focus
-shift + cmd - x : chunkc tiling::window --send-to-desktop $(chunkc get _last_active_desktop); qes -k "cmd + alt - $(chunkc get _last_active_desktop)"
-shift + cmd - z : chunkc tiling::window --send-to-desktop prev; qes -k "cmd + alt - z"
-shift + cmd - c : chunkc tiling::window --send-to-desktop next; qes -k "cmd + alt - c"
-shift + cmd - 1 : chunkc tiling::window --send-to-desktop 1; qes -k "cmd + alt - 1"
-shift + cmd - 2 : chunkc tiling::window --send-to-desktop 2; qes -k "cmd + alt - 2"
-shift + cmd - 3 : chunkc tiling::window --send-to-desktop 3; qes -k "cmd + alt - 3"
-shift + cmd - 4 : chunkc tiling::window --send-to-desktop 4; qes -k "cmd + alt - 4"
-shift + cmd - 5 : chunkc tiling::window --send-to-desktop 5; qes -k "cmd + alt - 5"
-shift + cmd - 6 : chunkc tiling::window --send-to-desktop 6; qes -k "cmd + alt - 6"
+shift + cmd - x : chunkc tiling::window --send-to-desktop $(chunkc get _last_active_desktop)
+shift + cmd - z : chunkc tiling::window --send-to-desktop prev
+shift + cmd - c : chunkc tiling::window --send-to-desktop next
+shift + cmd - 1 : chunkc tiling::window --send-to-desktop 1
+shift + cmd - 2 : chunkc tiling::window --send-to-desktop 2
+shift + cmd - 3 : chunkc tiling::window --send-to-desktop 3
+shift + cmd - 4 : chunkc tiling::window --send-to-desktop 4
+shift + cmd - 5 : chunkc tiling::window --send-to-desktop 5
+shift + cmd - 6 : chunkc tiling::window --send-to-desktop 6
 
 # focus monitor
 ctrl + alt - z  : chunkc tiling::monitor -f prev
@@ -210,7 +201,3 @@ ctrl + alt - s : chunkc tiling::desktop --layout monocle
 ctrl + alt - d : chunkc tiling::desktop --layout float
 
 ctrl + alt - w : chunkc tiling::desktop --deserialize ~/.chunkwm_layouts/dev_1
-
-cmd - 7 : qes -k "shift + alt - 7"
-cmd - 8 : qes -k "shift + alt - 8"
-cmd - 9 : qes -k "shift + alt - 9"
