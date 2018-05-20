@@ -1,6 +1,7 @@
 tap "crisidev/chunkwm"
 tap "homebrew/core"
 tap "homebrew/bundle"
+tap "koekeishiya/formulae"
 tap "caskroom/fonts"
 tap "caskroom/versions"
 tap "caskroom/cask"
@@ -79,6 +80,10 @@ brew "vim", args: ["with-python@2"]
 brew "wget"
 # UNIX shell (command interpreter)
 brew "zsh"
+# Tiling window manager for macOS based on plugin architecture
+brew "crisidev/chunkwm/chunkwm"
+# Simple hotkey-daemon for macOS.
+brew "koekeishiya/formulae/skhd", args: ["with-logging"]
 cask "alfred"
 cask "authy"
 cask "docker"
