@@ -31226,7 +31226,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>476 369 796 473 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>161 37 1100 813 0 0 1440 900 </string>
+	<string>161 51 1100 790 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>54 371 580 500 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -31839,7 +31839,7 @@
 			<key>Non-ASCII Ligatures</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>InconsolataForPowerline-g 10</string>
+			<string>InconsolataNerdFontCompleteM-Medium 12</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -32627,7 +32627,7 @@
 			<key>Non-ASCII Ligatures</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>InconsolataForPowerline-g 11</string>
+			<string>InconsolataNerdFontCompleteM-Medium 12</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prevent Opening in a Tab</key>
