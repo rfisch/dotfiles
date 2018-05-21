@@ -1,6 +1,9 @@
 - defaults:
     link:
       relink: true
+    shell:
+      stdout: true
+      stderr: true
 
 - clean: ['~']
 
@@ -10,5 +13,7 @@
     ~/.skhdrc: mac/skhdrc
 
 - shell:
+  - [brew bundle cleanup --file=$HOME/.Brewfile --force, Uninstall all deps not in Brewfile]
+  - [brew bundle install --file=$HOME/.Brewfile, Install or upgrade all deps not in Brewfile]
   - [brew services start crisidev/chunkwm/chunkwm, Launchd start chunkwm]
   - [brew services start koekeishiya/formulae/skhd, Launchd start skhd]

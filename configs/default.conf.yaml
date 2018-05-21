@@ -1,2 +1,7 @@
+- defaults:
+    shell:
+      stdout: true
+      stderr: true
+
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
