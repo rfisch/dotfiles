@@ -1,2 +1,7 @@
+- defaults:
+    shell:
+      stdout: true
+      stderr: true
+
 - shell:
   - [sudo pacman -S --needed - < arch/pkglist.txt, Installing packages]
