@@ -15,5 +15,5 @@
 - shell:
   - [brew bundle cleanup --file=$HOME/.Brewfile --force, Uninstall all deps not in Brewfile]
   - [brew bundle install --file=$HOME/.Brewfile, Install or upgrade all deps not in Brewfile]
-  - [brew services start crisidev/chunkwm/chunkwm, Launchd start chunkwm]
-  - [brew services start koekeishiya/formulae/skhd, Launchd start skhd]
+  - [brew services restart crisidev/chunkwm/chunkwm, Launchd restart chunkwm]
+  - [brew services restart koekeishiya/formulae/skhd, Launchd restart skhd]

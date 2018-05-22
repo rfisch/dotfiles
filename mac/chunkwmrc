@@ -37,7 +37,7 @@ chunkc set global_desktop_offset_top     20
 chunkc set global_desktop_offset_bottom  20
 chunkc set global_desktop_offset_left    20
 chunkc set global_desktop_offset_right   20
-chunkc set global_desktop_offset_gap     15
+chunkc set global_desktop_offset_gap     20
 
 #
 # NOTE: syntax for desktop-specific settings
@@ -74,17 +74,6 @@ chunkc set preselect_border_color        0xffffffaf
 chunkc set preselect_border_width        2
 
 #
-# NOTE: these settings require chwm-sa.
-#       (https://github.com/koekeishiya/chwm-sa)
-#
-
-chunkc set window_float_topmost          0
-chunkc set window_fade_inactive          0
-chunkc set window_fade_alpha             0.85
-chunkc set window_fade_duration          0.25
-chunkc set window_use_cgs_move           0
-
-#
 # NOTE: the following are config variables for the chunkwm-border plugin.
 #
 
@@ -112,6 +101,4 @@ chunkc core::load ffm.so
 # NOTE: sample rules for the tiling plugin
 #
 
-chunkc tiling::rule --owner Finder --name Copy --state float &
 chunkc tiling::rule --owner \"App Store\" --state float &
-chunkc tiling::rule --owner Emacs --except "^$" --state tile &
