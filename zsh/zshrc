@@ -1,7 +1,7 @@
 export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME=""
-plugins=(git mercurial mercurial-mq rmd ss)
+plugins=(git mercurial)
 
 source "$ZSH/oh-my-zsh.sh"
 
