@@ -4,9 +4,6 @@
 [submodule "zsh/slimzsh"]
 	path = zsh/slimzsh
 	url = https://github.com/changs/slimzsh
-[submodule "zsh/oh-my-zsh"]
-	path = zsh/oh-my-zsh
-	url = https://github.com/aglorei/oh-my-zsh
 [submodule "utils/fzf"]
 	path = utils/fzf
 	url = https://github.com/junegunn/fzf
