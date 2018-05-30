@@ -33,6 +33,8 @@ brew "git"
 brew "gnupg"
 # Improved top (interactive process viewer)
 brew "htop"
+# Tool to report network interface bandwidth
+brew "ifstat"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Kubernetes command-line interface
