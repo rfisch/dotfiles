@@ -36,6 +36,10 @@ cd ~/dotfiles
 ```
 
 * Creates a link to [Brewfile](mac/Brewfile) in $HOME
+* Installs [chunkwm](https://github.com/koekeishiya/chunkwm)
+* Installs [skhd](https://github.com/koekeishiya/skhd)
+* Installs [Übersicht](https://github.com/felixhageloh/uebersicht)
+* Installs [Pecan](https://github.com/aglorei/Pecan.git)
 
 ## Utils Configuration
 
@@ -63,6 +67,6 @@ cd ~/dotfiles
 ```
 
 * Installs [base16-shell](https://github.com/chriskempson/base16-shell)
-* Installs [oh-my-zsh](https://github.com/aglorei/oh-my-zsh)
+* Installs [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 * Installs [slimzsh](https://github.com/changs/slimzsh)
 * Creates a link to [zshrc](zsh/zshrc) in $HOME
