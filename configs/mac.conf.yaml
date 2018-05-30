@@ -12,7 +12,6 @@
     ~/.chunkwmrc: mac/chunkwmrc
     ~/.skhdrc: mac/skhdrc
     ~/Library/Application Support/Übersicht/widgets/Pecan: mac/Pecan
-    ~/Library/Application Support/Übersicht/widgets/Xanthia: mac/Xanthia
 
 - shell:
   - [brew bundle cleanup --file=$HOME/.Brewfile --force, Uninstall all deps not in Brewfile]
