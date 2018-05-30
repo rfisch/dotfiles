@@ -33,6 +33,8 @@ brew "git"
 brew "gnupg"
 # Improved top (interactive process viewer)
 brew "htop"
+# Tool to report network interface bandwidth
+brew "ifstat"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Kubernetes command-line interface
@@ -99,6 +101,7 @@ cask "rocket"
 cask "signal"
 cask "skype-for-business"
 cask "spotify"
+cask "ubersicht"
 cask "virtualbox"
 cask "vlc"
 cask "homebrew/cask-fonts/font-proggyclean-nerd-font-mono"
