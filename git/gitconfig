@@ -7,3 +7,5 @@
   signingkey = ED8839A2
 [commit]
   gpgsign = true
+[diff "ansible-vault"]
+  textconv = ansible-vault view
