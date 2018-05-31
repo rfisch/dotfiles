@@ -9,6 +9,8 @@ tap "koekeishiya/formulae"
 cask "java"
 # GNU database manager
 brew "gdbm"
+# Interpreted, interactive, object-oriented programming language
+brew "python@2"
 # Automate deployment, configuration, and upgrading
 brew "ansible"
 # Interpreted, interactive, object-oriented programming language
@@ -41,6 +43,8 @@ brew "jq"
 brew "kubernetes-cli"
 # Production Grade K8s Installation, Upgrades, and Management
 brew "kops"
+# Multi-platform support library with a focus on asynchronous I/O
+brew "libuv"
 # Java-based project management
 brew "maven"
 # Cross platform, open source .NET development framework
@@ -99,6 +103,7 @@ cask "microsoft-teams"
 cask "mono-mdk"
 cask "rocket"
 cask "signal"
+cask "skype"
 cask "skype-for-business"
 cask "spotify"
 cask "ubersicht"
