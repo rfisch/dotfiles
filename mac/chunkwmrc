@@ -70,9 +70,6 @@ chunkc set mouse_move_window             \"fn 1\"
 chunkc set mouse_resize_window           \"fn 2\"
 chunkc set mouse_motion_interval         35
 
-chunkc set preselect_border_color        0xffffffaf
-chunkc set preselect_border_width        2
-
 #
 # NOTE: the following are config variables for the chunkwm-border plugin.
 #
