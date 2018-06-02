@@ -57,6 +57,7 @@ python-neovim
 python2-neovim
 reiserfsprogs
 ripgrep
+rsync
 s-nail
 sed
 shadow
