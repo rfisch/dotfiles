@@ -60,6 +60,7 @@ ripgrep
 s-nail
 sed
 shadow
+strongswan
 sudo
 sysfsutils
 systemd-sysvcompat
