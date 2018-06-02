@@ -48,6 +48,7 @@ cd ~/dotfiles
 ```
 
 * Installs [fzf](https://github.com/junegunn/fzf) utility
+* Creates a link to [htoprc](utils/htoprc) in $HOME/.config/htoprc
 * Creates a link to [tmux.conf](utils/tmux.conf) in $HOME
 
 ## Vim Configuration
