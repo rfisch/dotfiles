@@ -1,3 +1,4 @@
+ansible
 bash
 bind-tools
 bzip2
@@ -63,6 +64,7 @@ sudo
 sysfsutils
 systemd-sysvcompat
 tar
+terraform
 texinfo
 tmux
 tree
