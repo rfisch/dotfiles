@@ -1,6 +1,7 @@
 - defaults:
     link:
       relink: true
+      create: true
     shell:
       stdout: true
       stderr: true
@@ -9,6 +10,7 @@
 
 - link:
     ~/.fzf: utils/fzf
+    ~/.config/htop/htoprc: utils/htoprc
     ~/.tmux.conf: utils/tmux.conf
 
 - shell:
