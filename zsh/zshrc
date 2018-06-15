@@ -65,7 +65,7 @@ function bb() {
     echo >&2 "Could not find ${1} host in $HOME/.ssh/config. Bye."
     return 1
   fi
-  tmux a -t $1 || tmux new -s $1 "ssh ${1}"
+  tmux a -t $1 || tmux new -s $1 -n $1 "ssh ${1}"
 }
 
 # lazy
