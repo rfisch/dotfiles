@@ -11,6 +11,7 @@
 - link:
     ~/.fzf: utils/fzf
     ~/.config/htop/htoprc: utils/htoprc
+    ~/.gnupg/gpg-agent.conf: utils/gpg-agent.conf
     ~/.tmux.conf: utils/tmux.conf
 
 - shell:

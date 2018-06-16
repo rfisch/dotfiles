@@ -49,6 +49,7 @@ cd ~/dotfiles
 
 * Installs [fzf](https://github.com/junegunn/fzf) utility
 * Creates a link to [htoprc](utils/htoprc) in $HOME/.config/htoprc
+* Creates a link to [gpg-agent.conf](utils/gpg-agent.conf) in $HOME/.gnupg/gpg-agent.conf
 * Creates a link to [tmux.conf](utils/tmux.conf) in $HOME
 
 ## Vim Configuration
