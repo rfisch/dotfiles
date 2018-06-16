@@ -1,7 +1,15 @@
 - defaults:
+    link:
+      relink: true
+      create: true
     shell:
       stdout: true
       stderr: true
+
+- clean: ['~']
+
+- link:
+    ~/.gnupg/gpg-agent.conf: arch/gpg-agent.conf
 
 - shell:
   - [sudo pacman -S --needed - < arch/pkglist.txt, Installing packages]

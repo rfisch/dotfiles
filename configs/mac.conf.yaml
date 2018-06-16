@@ -12,6 +12,7 @@
     ~/.Brewfile: mac/Brewfile
     ~/.chunkwmrc: mac/chunkwmrc
     ~/.skhdrc: mac/skhdrc
+    ~/.gnupg/gpg-agent.conf: mac/gpg-agent.conf
     ~/Library/Application Support/Übersicht/widgets/Pecan: mac/Pecan
 
 - shell:
