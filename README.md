@@ -18,6 +18,7 @@ cd ~/dotfiles
 ./install arch
 ```
 
+* Creates a link to [gpg-agent.conf](arch/gpg-agent.conf) in $HOME/.gnupg/gpg-agent.conf
 * Installs packages from [list backup](arch/pkglist.txt) with pacman
 
 ## Git Configuration
@@ -36,6 +37,7 @@ cd ~/dotfiles
 ```
 
 * Creates a link to [Brewfile](mac/Brewfile) in $HOME
+* Creates a link to [gpg-agent.conf](mac/gpg-agent.conf) in $HOME/.gnupg/gpg-agent.conf
 * Installs [chunkwm](https://github.com/koekeishiya/chunkwm)
 * Installs [skhd](https://github.com/koekeishiya/skhd)
 * Installs [Übersicht](https://github.com/felixhageloh/uebersicht)
@@ -49,7 +51,6 @@ cd ~/dotfiles
 
 * Installs [fzf](https://github.com/junegunn/fzf) utility
 * Creates a link to [htoprc](utils/htoprc) in $HOME/.config/htoprc
-* Creates a link to [gpg-agent.conf](utils/gpg-agent.conf) in $HOME/.gnupg/gpg-agent.conf
 * Creates a link to [tmux.conf](utils/tmux.conf) in $HOME
 
 ## Vim Configuration

@@ -43,8 +43,6 @@ brew "jq"
 brew "kubernetes-cli"
 # Production Grade K8s Installation, Upgrades, and Management
 brew "kops"
-# Multi-platform support library with a focus on asynchronous I/O
-brew "libuv"
 # Java-based project management
 brew "maven"
 # Cross platform, open source .NET development framework
@@ -59,8 +57,6 @@ brew "node"
 brew "p7zip"
 # Tool for creating identical machine images for multiple platforms
 brew "packer"
-# Pinentry for GPG on Mac
-brew "pinentry-mac"
 # Animated pipes terminal screensaver
 brew "pipes-sh"
 # Show ps output as a tree
