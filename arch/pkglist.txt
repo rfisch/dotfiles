@@ -19,6 +19,7 @@ gawk
 gcc
 gcc-libs
 gettext
+gist
 git
 glibc
 grep
