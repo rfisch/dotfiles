@@ -22,7 +22,6 @@ gettext
 gist
 git
 glibc
-gradle
 grep
 grub
 gzip

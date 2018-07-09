@@ -35,8 +35,6 @@ brew "gist"
 brew "git"
 # GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
-# Build system based on the Groovy language
-brew "gradle"
 # Improved top (interactive process viewer)
 brew "htop"
 # Tool to report network interface bandwidth
