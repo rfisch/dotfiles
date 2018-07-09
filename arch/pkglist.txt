@@ -29,6 +29,7 @@ htop
 inetutils
 iproute2
 iputils
+jdk10-openjdk
 jfsutils
 jq
 less
