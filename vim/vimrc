@@ -9,9 +9,6 @@ if dein#load_state('~/.vim/bundles')
   " Let dein manage dein.
   call dein#add('~/.vim/bundles/repos/github.com/Shougo/dein.vim')
 
-  " Utility
-  call dein#add('ctrlpvim/ctrlp.vim')
-
   " Generic Programming
   call dein#add('Raimondi/delimitMate')
   call dein#add('tpope/vim-commentary')
@@ -20,6 +17,13 @@ if dein#load_state('~/.vim/bundles')
   " Syntax
   call dein#add('scrooloose/syntastic')
   call dein#add('PProvost/vim-ps1')
+
+  " Utility
+  call dein#add('ctrlpvim/ctrlp.vim')
+  call dein#add('autozimu/LanguageClient-neovim', {
+    \ 'rev': 'next',
+    \ 'build': 'bash install.sh',
+    \ })
 
   " Version Control
   call dein#add('tpope/vim-fugitive')
@@ -126,6 +130,17 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 2
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" LanguageClient-neovim
+" Requires 'set hidden'
+
+let g:LanguageClient_serverCommands = {
+    \ 'rust': ['rustup', 'run', 'nightly', 'rls']
+    \ }
+
+nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> nm :call LanguageClient#textDocument_rename()<CR>
 
 " this machine config
 if filereadable(expand("~/.vimrc.local"))
