@@ -24,6 +24,11 @@ if dein#load_state('~/.vim/bundles')
     \ 'rev': 'next',
     \ 'build': 'bash install.sh',
     \ })
+  call dein#add('Shougo/deoplete.nvim')
+  if !has('nvim')
+    call dein#add('roxma/nvim-yarp')
+    call dein#add('roxma/vim-hug-neovim-rpc')
+  endif
 
   " Version Control
   call dein#add('tpope/vim-fugitive')
@@ -141,6 +146,9 @@ let g:LanguageClient_serverCommands = {
 nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
 nnoremap <silent> nm :call LanguageClient#textDocument_rename()<CR>
+
+" deoplete
+let g:deoplete#enable_at_startup = 1
 
 " this machine config
 if filereadable(expand("~/.vimrc.local"))
