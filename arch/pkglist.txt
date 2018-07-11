@@ -48,6 +48,7 @@ neovim
 netctl
 netdata
 openssh
+packer-io
 pacman
 pciutils
 perl
