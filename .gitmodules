@@ -16,3 +16,6 @@
 [submodule "mac/Pecan"]
 	path = mac/Pecan
 	url = https://github.com/aglorei/Pecan.git
+[submodule "zsh/spaceship-prompt"]
+	path = zsh/spaceship-prompt
+	url = https://github.com/denysdovhan/spaceship-prompt
