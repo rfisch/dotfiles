@@ -10,5 +10,5 @@
 - link:
     ~/.config/base16-shell: zsh/base16-shell
     ~/.oh-my-zsh: zsh/oh-my-zsh
-    ~/.slimzsh: zsh/slimzsh
+    ~/.geometry: zsh/geometry
     ~/.zshrc: zsh/zshrc
