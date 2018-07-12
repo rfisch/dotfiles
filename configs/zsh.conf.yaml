@@ -9,6 +9,7 @@
 
 - link:
     ~/.config/base16-shell: zsh/base16-shell
+    ~/.fsh: zsh/fast-syntax-highlighting
     ~/.oh-my-zsh: zsh/oh-my-zsh
     ~/.geometry: zsh/geometry
     ~/.zshrc: zsh/zshrc
