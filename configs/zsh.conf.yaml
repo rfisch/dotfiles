@@ -1,7 +1,6 @@
 - defaults:
     link:
       relink: true
-      create: true
     shell:
       stdout: true
       stderr: true
@@ -11,5 +10,5 @@
 - link:
     ~/.config/base16-shell: zsh/base16-shell
     ~/.oh-my-zsh: zsh/oh-my-zsh
-    ~/.zfunctions/prompt_spaceship_setup: zsh/spaceship-prompt/spaceship.zsh
+    ~/.slimzsh: zsh/slimzsh
     ~/.zshrc: zsh/zshrc
