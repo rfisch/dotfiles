@@ -1,9 +1,6 @@
 [submodule "dotbot"]
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
-[submodule "zsh/slimzsh"]
-	path = zsh/slimzsh
-	url = https://github.com/changs/slimzsh
 [submodule "utils/fzf"]
 	path = utils/fzf
 	url = https://github.com/junegunn/fzf
@@ -16,3 +13,9 @@
 [submodule "mac/Pecan"]
 	path = mac/Pecan
 	url = https://github.com/aglorei/Pecan.git
+[submodule "zsh/geometry"]
+	path = zsh/geometry
+	url = https://github.com/geometry-zsh/geometry
+[submodule "zsh/fast-syntax-highlighting"]
+	path = zsh/fast-syntax-highlighting
+	url = https://github.com/zdharma/fast-syntax-highlighting
