@@ -10,16 +10,13 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
 # geometry
+GEOMETRY_SYMBOL_PROMPT="ℷ"
+GEOMETRY_SYMBOL_RPROMPT="ℷ"
+GEOMETRY_SYMBOL_EXIT_VALUE="ℷ"
+PROMPT_GEOMETRY_COLORIZE_SYMBOL="true"
+GEOMETRY_PROMPT_PREFIX=""
+GEOMETRY_PROMPT_PLUGINS=(virtualenv exec_time git)
 source "$HOME/.geometry/geometry.zsh"
-
-# slimzsh
-# source "$HOME/.slimzsh/slim.zsh"
-# PURE_PROMPT_SYMBOL='ℷ'
-# PURE_GIT_DOWN_ARROW='↑'
-# PURE_GIT_UP_ARROW='↓'
-# prompt_newline='%666v'
-# PROMPT='%F{white}%* '$PROMPT
-# PROMPT=" $PROMPT"
 
 if [[ ${OSTYPE} =~ "darwin" ]]; then
   # list
