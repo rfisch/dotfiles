@@ -12,6 +12,10 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 # fast-syntax-highlighting
 source "$HOME/.fsh/fast-syntax-highlighting.plugin.zsh"
 
+if command -v fasd >/dev/null 2>&1; then
+  eval "$(fasd --init auto)"
+fi
+
 # geometry
 GEOMETRY_SYMBOL_PROMPT="ℷ"
 GEOMETRY_SYMBOL_RPROMPT="ℷ"
