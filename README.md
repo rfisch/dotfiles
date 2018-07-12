@@ -70,6 +70,7 @@ cd ~/dotfiles
 ```
 
 * Installs [base16-shell](https://github.com/chriskempson/base16-shell)
+* Installs [fast-syntax-highlighting](https://github.com/zdharma/fast-syntax-highlighting)
+* Installs [geometry](https://github.com/geometry-zsh/geometry)
 * Installs [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
-* Installs [slimzsh](https://github.com/changs/slimzsh)
 * Creates a link to [zshrc](zsh/zshrc) in $HOME
