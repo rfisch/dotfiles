@@ -48,6 +48,7 @@ neovim
 netctl
 netdata
 openssh
+p7zip
 packer-io
 pacman
 pciutils
