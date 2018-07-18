@@ -45,6 +45,8 @@ brew "jq"
 brew "kubernetes-cli"
 # Production Grade K8s Installation, Upgrades, and Management
 brew "kops"
+# LastPass command-line interface tool
+brew "lastpass-cli", args: ["with-pinentry"]
 # Java-based project management
 brew "maven"
 # Cross platform, open source .NET development framework

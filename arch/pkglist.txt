@@ -32,6 +32,7 @@ iputils
 jdk10-openjdk
 jfsutils
 jq
+lastpass-cli
 less
 licenses
 linux
