@@ -1,43 +1,26 @@
 # Install
 
-The install script accepts arguments that translate into dotbot configurations, and will synchronously execute all corresponding installations specified. For example, `./install mac vim` will run dotbot installations from `default.conf.yaml`, `mac.conf.yaml`, and `vim.conf.yaml`, in that order.
-
-## Default Configuration
-
 ```sh
-git clone --recurse-submodules https://github.com/aglorei/dotfiles ~/dotfiles
-cd ~/dotfiles
-./install
+python3 -m venv env
+source env/bin/activate
+pip install -r requirements.txt
+GITPROFILE=default ansible-playbook -vv --ask-become-pass master.yml
 ```
-
-* Init and update dotfile submodules
-
-## Arch Linux Configuration
-
-```sh
-./install arch
-```
-
-* Creates a link to [gpg-agent.conf](arch/gpg-agent.conf) in $HOME/.gnupg/gpg-agent.conf
-* Installs packages from [list backup](arch/pkglist.txt) with pacman
 
 ## Git Configuration
 
-```sh
-./install git
-```
+* Creates a link to [gitignore_global](roles/git/files/gitignore_global) in $HOME
+* Creates a link to _my_ (personal) [gitconfig](roles/git/templates/gitconfig.j2) in $HOME
 
-* Creates a link to [gitignore_global](default/gitignore_global) in $HOME
-* Creates a link to _my_ (personal) [gitconfig](default/gitconfig) in $HOME
+## Package Configuration
 
-## Mac Configuration
+### Arch Linux Configuration
 
-```sh
-./install mac
-```
+* Installs packages from [list backup](roles/packages/files/archfile.txt) with pacman
 
-* Creates a link to [Brewfile](mac/Brewfile) in $HOME
-* Creates a link to [gpg-agent.conf](mac/gpg-agent.conf) in $HOME/.gnupg/gpg-agent.conf
+### Mac Configuration
+
+* Creates a link to [Brewfile](roles/packages/files/Brewfile) in $HOME
 * Installs [chunkwm](https://github.com/koekeishiya/chunkwm)
 * Installs [skhd](https://github.com/koekeishiya/skhd)
 * Installs [Übersicht](https://github.com/felixhageloh/uebersicht)
@@ -45,32 +28,20 @@ cd ~/dotfiles
 
 ## Utils Configuration
 
-```sh
-./install utils
-```
-
+* Creates a link to [gpg-agent.conf](roles/utils/templates/gpg-agent.conf.j2) in $HOME/.gnupg/gpg-agent.conf
 * Installs [fzf](https://github.com/junegunn/fzf) utility
-* Creates a link to [htoprc](utils/htoprc) in $HOME/.config/htoprc
-* Creates a link to [tmux.conf](utils/tmux.conf) in $HOME
+* Creates a link to [htoprc](utils/roles/utils/files/htoprc) in $HOME/.config/htoprc
+* Creates a link to [tmux.conf](roles/utils/files/tmux.conf) in $HOME
 
-## Vim Configuration
-
-```sh
-./install vim
-```
-
-* Installs [dein.vim](dein) plugin manager
-* Creates a link to [vimrc](vim/vimrc) in $HOME
-* Creates a link to [init.vim](vim/init.vim) in $HOME/.config/nvim
-
-## Zsh Configuration
-
-```sh
-./install zsh
-```
-
+### ZSH Configuration
 * Installs [base16-shell](https://github.com/chriskempson/base16-shell)
 * Installs [fast-syntax-highlighting](https://github.com/zdharma/fast-syntax-highlighting)
 * Installs [geometry](https://github.com/geometry-zsh/geometry)
 * Installs [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
-* Creates a link to [zshrc](zsh/zshrc) in $HOME
+* Creates a link to [zshrc](roles/utils/files/zshrc) in $HOME
+
+## Vim Configuration
+
+* Installs [dein.vim](https://github.com/Shougo/dein) plugin manager
+* Creates a link to [vimrc](roles/vim/files/vimrc) in $HOME
+* Creates a link to [init.vim](roles/vim/files/init.vim) in $HOME/.config/nvim
