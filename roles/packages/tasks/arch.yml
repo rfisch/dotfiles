@@ -1,0 +1,13 @@
+---
+- name: Run the equivalent of "pacman -Syu"
+  become: yes
+  pacman:
+    update_cache: yes
+    upgrade: yes
+
+- name: Install packages from manifest
+  become: yes
+  pacman:
+    name: "{{ item }}"
+    state: latest
+  with_file: archfile.txt

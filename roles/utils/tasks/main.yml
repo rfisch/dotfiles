@@ -1,4 +1,9 @@
 ---
+- name: Copy gpg-agent.conf
+  template:
+    src: gpg-agent.conf.j2
+    dest: ~/.gnupg/gpg-agent.conf
+
 - name: Ensure ~/.config/htop
   file:
     path: ~/.config/htop
