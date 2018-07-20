@@ -1,3 +1,4 @@
 ---
+- import_playbook: git.yml
 - import_playbook: utils.yml
 - import_playbook: vim.yml
