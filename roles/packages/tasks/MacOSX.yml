@@ -8,6 +8,7 @@
   copy:
     src: chunkwmrc
     dest: ~/.chunkwmrc
+    mode: 0755
   register: chunkwmrc_copy
 
 - name: Restart chunkwm
