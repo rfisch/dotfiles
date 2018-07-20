@@ -1,4 +1,19 @@
 ---
+- name: Copy .vimrc
+  copy:
+    src: vimrc
+    dest: $HOME/.vimrc
+
+- name: Ensure $HOME/.config
+  file:
+    path: $HOME/.config/nvim
+    state: directory
+
+- name: Copy init.vim
+  copy:
+    src: init.vim
+    dest: $HOME/.config/nvim/init.vim
+
 - name: Check vim base directory
   stat:
     path: "{{ vim_base_dir }}"
