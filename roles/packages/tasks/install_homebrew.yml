@@ -1,0 +1,8 @@
+---
+- name: Download homebrew installer
+  get_url:
+    url: https://raw.githubusercontent.com/Homebrew/install/master/install
+    dest: /tmp
+
+- name: Install homebrew
+  command: /usr/bin/ruby -e /tmp/install

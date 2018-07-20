@@ -1,0 +1,42 @@
+---
+- name: Copy Brewfile
+  copy:
+    src: Brewfile
+    dest: ~/.Brewfile
+
+- name: Copy chunkwmrc
+  copy:
+    src: chunkwmrc
+    dest: ~/.chunkwmrc
+  register: chunkwmrc_copy
+
+- name: Restart chunkwm
+  command: brew services restart crisidev/chunkwm/chunkwm
+  when: chunkwmrc_copy.changed
+
+- name: Copy skhdrc
+  copy:
+    src: skhdrc
+    dest: ~/.skhdrc
+  register: skhdrc_copy
+
+- name: Restart skhd
+  command: brew services restart koekeishiya/formulae/skhd
+  when: skhdrc_copy.changed
+
+- name: Synchronize Pecan
+  synchronize:
+    src: Pecan/
+    dest: ~/Library/Application Support/Übersicht/widgets/Pecan/
+    checksum: yes
+    recursive: yes
+    times: no
+
+- name: Check for homebrew installation
+  command: command -v brew &>/dev/null
+  register: homebrew_check
+
+- include_tasks: install_homebrew.yml
+  when: homebrew_check.rc != 0
+
+- include_tasks: homebrew_packages_install.yml

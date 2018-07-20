@@ -11,3 +11,7 @@
     name: "{{ item }}"
     state: latest
   with_file: archfile.txt
+
+- name: Print homebrew install stdout
+  debug:
+    msg: "{{ homebrew_cleanup.stdout_lines }}"
