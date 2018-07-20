@@ -1,2 +1,2 @@
 ---
-vim_base_dir: $HOME/.vim/bundles
+vim_base_dir: ~/.vim/bundles

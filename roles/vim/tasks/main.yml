@@ -2,17 +2,17 @@
 - name: Copy .vimrc
   copy:
     src: vimrc
-    dest: $HOME/.vimrc
+    dest: ~/.vimrc
 
-- name: Ensure $HOME/.config
+- name: Ensure ~/.config/nvim
   file:
-    path: $HOME/.config/nvim
+    path: ~/.config/nvim
     state: directory
 
 - name: Copy init.vim
   copy:
     src: init.vim
-    dest: $HOME/.config/nvim/init.vim
+    dest: ~/.config/nvim/init.vim
 
 - name: Check vim base directory
   stat:
