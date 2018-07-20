@@ -1,21 +1,21 @@
 [submodule "dotbot"]
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
-[submodule "zsh/base16-shell"]
-	path = zsh/base16-shell
-	url = https://github.com/chriskempson/base16-shell.git
-[submodule "zsh/oh-my-zsh"]
-	path = zsh/oh-my-zsh
-	url = https://github.com/robbyrussell/oh-my-zsh.git
 [submodule "mac/Pecan"]
 	path = mac/Pecan
 	url = https://github.com/aglorei/Pecan.git
-[submodule "zsh/geometry"]
-	path = zsh/geometry
-	url = https://github.com/geometry-zsh/geometry
-[submodule "zsh/fast-syntax-highlighting"]
-	path = zsh/fast-syntax-highlighting
-	url = https://github.com/zdharma/fast-syntax-highlighting
 [submodule "roles/utils/files/fzf"]
 	path = roles/utils/files/fzf
 	url = https://github.com/junegunn/fzf
+[submodule "roles/zsh/files/base16-shell"]
+	path = roles/zsh/files/base16-shell
+	url = https://github.com/chriskempson/base16-shell.git
+[submodule "roles/zsh/files/oh-my-zsh"]
+	path = roles/zsh/files/oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh.git
+[submodule "roles/zsh/files/geometry"]
+	path = roles/zsh/files/geometry
+	url = https://github.com/geometry-zsh/geometry
+[submodule "roles/zsh/files/fast-syntax-highlighting"]
+	path = roles/zsh/files/fast-syntax-highlighting
+	url = https://github.com/zdharma/fast-syntax-highlighting
