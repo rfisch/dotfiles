@@ -1,4 +1,6 @@
 ---
+- include_tasks: zsh.yml
+
 - name: Copy gpg-agent.conf
   template:
     src: gpg-agent.conf.j2
