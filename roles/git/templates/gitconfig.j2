@@ -1,0 +1,11 @@
+[core]
+  editor = {{ core.editor }}
+  excludesfile = ~/.gitignore_global
+[user]
+  name = {{ git_user[lookup('env', 'GIT_PROFILE')].name }}
+  email = {{ git_user[lookup('env', 'GIT_PROFILE')].email }}
+  signingkey = {{ git_user[lookup('env', 'GIT_PROFILE')].signingkey }}
+[commit]
+  gpgsign = true
+[diff "ansible-vault"]
+  textconv = ansible-vault view

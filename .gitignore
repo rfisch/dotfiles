@@ -20,6 +20,10 @@
 *.tar
 *.zip
 
+# Python #
+##########
+env
+
 # Logs and databases #
 ######################
 logs/

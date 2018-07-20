@@ -1,0 +1,10 @@
+---
+- name: Copy gitignore_global
+  copy:
+    src: gitignore_global
+    dest: ~/.gitignore_global
+
+- name: Copy gitconfig
+  template:
+    src: gitconfig.j2
+    dest: ~/.gitconfig

@@ -1,0 +1,25 @@
+---
+- name: Cleanup packages not found in manifest
+  command: brew bundle cleanup --file=~/.Brewfile --force
+  register: homebrew_cleanup
+
+- name: Print homebrew cleanup stdout
+  debug:
+    msg: "{{ homebrew_cleanup.stdout_lines }}"
+
+- name: Install packages from manifest
+  command: brew bundle install --file=~/.Brewfile
+  register: homebrew_packages_install
+
+- name: Print homebrew packages install stdout
+  debug:
+    msg: "{{ homebrew_packages_install.stdout_lines }}"
+
+- name: Update homebrew and upgrade all packages
+  homebrew:
+    update_homebrew: yes
+    upgrade_all: yes
+
+- name: Update homebrew cask and upgrade all packages
+  homebrew_cask:
+    upgrade_all: true

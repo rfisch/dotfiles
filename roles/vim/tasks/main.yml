@@ -1,0 +1,23 @@
+---
+- name: Copy .vimrc
+  copy:
+    src: vimrc
+    dest: ~/.vimrc
+
+- name: Ensure ~/.config/nvim
+  file:
+    path: ~/.config/nvim
+    state: directory
+
+- name: Copy init.vim
+  copy:
+    src: init.vim
+    dest: ~/.config/nvim/init.vim
+
+- name: Check vim base directory
+  stat:
+    path: "{{ vim_base_dir }}"
+  register: dircheck
+
+- include_tasks: install_dein.yml
+  when: dircheck.stat.exists == False

@@ -1,0 +1,37 @@
+---
+- name: Copy zshrc
+  copy:
+    src: zshrc
+    dest: ~/.zshrc
+
+- name: Synchronize base16-shell
+  synchronize:
+    src: base16-shell/
+    dest: ~/.config/base16-shell
+    checksum: yes
+    recursive: yes
+    times: no
+
+- name: Synchronize fast-syntax-highlighting
+  synchronize:
+    src: fast-syntax-highlighting/
+    dest: ~/.fsh
+    checksum: yes
+    recursive: yes
+    times: no
+
+- name: Synchronize geometry
+  synchronize:
+    src: geometry/
+    dest: ~/.geometry
+    checksum: yes
+    recursive: yes
+    times: no
+
+- name: Synchronize oh-my-zsh
+  synchronize:
+    src: oh-my-zsh/
+    dest: ~/.oh-my-zsh
+    checksum: yes
+    recursive: yes
+    times: no

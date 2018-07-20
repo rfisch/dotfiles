@@ -1,0 +1,34 @@
+---
+- include_tasks: zsh.yml
+
+- name: Copy gpg-agent.conf
+  template:
+    src: gpg-agent.conf.j2
+    dest: ~/.gnupg/gpg-agent.conf
+
+- name: Ensure ~/.config/htop
+  file:
+    path: ~/.config/htop
+    state: directory
+
+- name: Copy htoprc
+  copy:
+    src: htoprc
+    dest: ~/.config/htop/htoprc
+
+- name: Synchronize fzf
+  synchronize:
+    src: fzf/
+    dest: ~/.fzf/
+    checksum: yes
+    recursive: yes
+    times: no
+  register: fzf_sync
+
+- include_tasks: install_fzf.yml
+  when: fzf_sync.changed
+
+- name: Copy tmux.conf
+  copy:
+    src: tmux.conf
+    dest: ~/.tmux.conf
