@@ -6,3 +6,8 @@
 
 - name: Install homebrew
   command: /usr/bin/ruby -e /tmp/install
+  register: install_homebrew
+
+- name: Print homebrew install stdout
+  debug:
+    msg: "{{ install_homebrew.stdout_lines }}"
