@@ -1,0 +1,8 @@
+---
+- name: Check vim base directory
+  stat:
+    path: "{{ vim_base_dir }}"
+  register: dircheck
+
+- include_tasks: install_dein.yml
+  when: dircheck.stat.exists == False

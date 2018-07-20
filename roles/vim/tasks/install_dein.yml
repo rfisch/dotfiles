@@ -1,0 +1,13 @@
+---
+- name: Download dein installer
+  get_url:
+    url: https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh
+    dest: /tmp
+
+- name: Execute dein installer
+  script: "/tmp/installer.sh {{ vim_base_dir }}"
+  register: dein_installer
+
+- name: Print dein installer stdout
+  debug:
+    msg: "{{ dein_installer.stdout_lines }}"
