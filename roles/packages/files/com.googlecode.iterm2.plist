@@ -33664,7 +33664,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/aglorei/dotfiles/roles/packages/files</string>
+	<string>~/dotfiles/roles/packages/files</string>
 	<key>Print In Black And White</key>
 	<true/>
 	<key>PromptOnQuit</key>
