@@ -1,4 +1,10 @@
 ---
+- name: Copy Brewfile
+  copy:
+    src: Brewfile
+    dest: ~/.Brewfile
+    mode: 0644
+
 - name: Cleanup packages not found in manifest
   command: brew bundle cleanup --file=~/.Brewfile --force
   register: homebrew_cleanup
