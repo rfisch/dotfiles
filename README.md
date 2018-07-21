@@ -1,4 +1,8 @@
-# Install
+# Dotfiles
+
+![Warm...warmer...disco.](screenshot.png)
+
+## Install
 
 ```sh
 python3 -m venv env
