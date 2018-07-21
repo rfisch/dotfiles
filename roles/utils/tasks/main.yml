@@ -41,22 +41,22 @@
 
 - name: Copy id_rsa.pub
   copy:
-    src: ssh/id_rsa.pub
+    src: id_rsa.pub
     dest: ~/.ssh/id_rsa.pub
 
 - name: Copy id_rsa
   copy:
-    src: ssh/id_rsa
+    src: id_rsa
     dest: ~/.ssh/id_rsa
     mode: 0600
 
 - name: Copy algo.pem
   copy:
-    src: ssh/algo.pem
+    src: algo.pem
     dest: ~/.ssh/algo.pem
     mode: 0600
 
 - name: Copy ssh config
   copy:
-    src: ssh/config
+    src: config
     dest: ~/.ssh/config
