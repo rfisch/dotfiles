@@ -3,16 +3,19 @@
   copy:
     src: vimrc
     dest: ~/.vimrc
+    mode: 0644
 
 - name: Ensure ~/.config/nvim
   file:
     path: ~/.config/nvim
+    mode: 0755
     state: directory
 
 - name: Copy init.vim
   copy:
     src: init.vim
     dest: ~/.config/nvim/init.vim
+    mode: 0644
 
 - name: Check vim base directory
   stat:

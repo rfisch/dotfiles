@@ -3,6 +3,7 @@
   copy:
     src: Brewfile
     dest: ~/.Brewfile
+    mode: 0644
 
 - name: Copy chunkwmrc
   copy:
@@ -19,6 +20,7 @@
   copy:
     src: skhdrc
     dest: ~/.skhdrc
+    mode: 0644
   register: skhdrc_copy
 
 - name: Restart skhd
