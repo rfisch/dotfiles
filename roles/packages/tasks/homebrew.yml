@@ -9,11 +9,11 @@
 
 - name: Install packages from manifest
   command: brew bundle install --file=~/.Brewfile
-  register: homebrew_packages_install
+  register: homebrew_install
 
 - name: Print homebrew packages install stdout
   debug:
-    msg: "{{ homebrew_packages_install.stdout_lines }}"
+    msg: "{{ homebrew_install.stdout_lines }}"
 
 - name: Update homebrew and upgrade all packages
   homebrew:

@@ -22,5 +22,5 @@
     path: "{{ vim_base_dir }}"
   register: dircheck
 
-- include_tasks: install_dein.yml
+- include_tasks: install-dein.yml
   when: dircheck.stat.exists == False

@@ -39,7 +39,7 @@
   command: command -v brew &>/dev/null
   register: homebrew_check
 
-- include_tasks: install_homebrew.yml
+- include_tasks: install-homebrew.yml
   when: homebrew_check.rc != 0
 
-- include_tasks: homebrew_packages_install.yml
+- include_tasks: homebrew.yml
