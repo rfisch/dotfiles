@@ -1,0 +1,12 @@
+---
+- name: Ensure ~/.config/htop
+  file:
+    path: ~/.config/htop
+    mode: 0755
+    state: directory
+
+- name: Ensure ~/.ssh
+  file:
+    path: ~/.ssh
+    mode: 0700
+    state: directory

@@ -1,0 +1,11 @@
+---
+- name: Copy skhdrc
+  copy:
+    src: skhdrc
+    dest: ~/.skhdrc
+    mode: 0644
+  register: skhdrc_copy
+
+- name: Restart skhd
+  command: brew services restart koekeishiya/formulae/skhd
+  when: skhdrc_copy.changed

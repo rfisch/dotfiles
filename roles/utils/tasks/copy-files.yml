@@ -1,0 +1,48 @@
+---
+- name: Copy algo.pem
+  copy:
+    src: algo.pem
+    dest: ~/.ssh/algo.pem
+    mode: 0600
+
+- name: Copy config
+  copy:
+    src: config
+    dest: ~/.ssh/config
+    mode: 0644
+
+- name: Copy gpg-agent.conf
+  template:
+    src: gpg-agent.conf.j2
+    dest: ~/.gnupg/gpg-agent.conf
+    mode: 0644
+
+- name: Copy htoprc
+  copy:
+    src: htoprc
+    dest: ~/.config/htop/htoprc
+    mode: 0644
+
+- name: Copy id_rsa.pub
+  copy:
+    src: id_rsa.pub
+    dest: ~/.ssh/id_rsa.pub
+    mode: 0644
+
+- name: Copy id_rsa
+  copy:
+    src: id_rsa
+    dest: ~/.ssh/id_rsa
+    mode: 0600
+
+- name: Copy tmux.conf
+  copy:
+    src: tmux.conf
+    dest: ~/.tmux.conf
+    mode: 0644
+
+- name: Copy zshrc
+  copy:
+    src: zshrc
+    dest: ~/.zshrc
+    mode: 0644

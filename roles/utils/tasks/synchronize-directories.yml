@@ -1,9 +1,4 @@
 ---
-- name: Copy zshrc
-  copy:
-    src: zshrc
-    dest: ~/.zshrc
-
 - name: Synchronize base16-shell
   synchronize:
     src: base16-shell/
@@ -19,6 +14,18 @@
     checksum: yes
     recursive: yes
     times: no
+
+- name: Synchronize fzf
+  synchronize:
+    src: fzf/
+    dest: ~/.fzf/
+    checksum: yes
+    recursive: yes
+    times: no
+  register: fzf_sync
+
+- include_tasks: install-fzf.yml
+  when: fzf_sync.changed
 
 - name: Synchronize geometry
   synchronize:

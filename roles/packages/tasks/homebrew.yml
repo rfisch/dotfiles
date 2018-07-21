@@ -1,4 +1,10 @@
 ---
+- name: Copy Brewfile
+  copy:
+    src: Brewfile
+    dest: ~/.Brewfile
+    mode: 0644
+
 - name: Cleanup packages not found in manifest
   command: brew bundle cleanup --file=~/.Brewfile --force
   register: homebrew_cleanup
@@ -9,11 +15,11 @@
 
 - name: Install packages from manifest
   command: brew bundle install --file=~/.Brewfile
-  register: homebrew_packages_install
+  register: homebrew_install
 
 - name: Print homebrew packages install stdout
   debug:
-    msg: "{{ homebrew_packages_install.stdout_lines }}"
+    msg: "{{ homebrew_install.stdout_lines }}"
 
 - name: Update homebrew and upgrade all packages
   homebrew:
