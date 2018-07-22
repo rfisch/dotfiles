@@ -2,9 +2,9 @@
   editor = {{ git_core.editor }}
   excludesfile = ~/.gitignore_global
 [user]
-  name = {{ git_user[lookup('env', 'GIT_PROFILE')].name }}
-  email = {{ git_user[lookup('env', 'GIT_PROFILE')].email }}
-  signingkey = {{ git_user[lookup('env', 'GIT_PROFILE')].signingkey }}
+  name = {{ git_user[git_profile].name }}
+  email = {{ git_user[git_profile].email }}
+  signingkey = {{ git_user[git_profile].signingkey }}
 [commit]
   gpgsign = true
 [diff "ansible-vault"]
