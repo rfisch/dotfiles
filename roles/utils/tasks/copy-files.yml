@@ -1,16 +1,4 @@
 ---
-- name: Copy algo.pem
-  copy:
-    src: algo.pem
-    dest: ~/.ssh/algo.pem
-    mode: 0600
-
-- name: Copy config
-  copy:
-    src: config
-    dest: ~/.ssh/config
-    mode: 0644
-
 - name: Copy gpg-agent.conf
   template:
     src: gpg-agent.conf.j2
@@ -23,17 +11,25 @@
     dest: ~/.config/htop/htoprc
     mode: 0644
 
-- name: Copy id_rsa.pub
+- name: Copy ssh config
   copy:
-    src: id_rsa.pub
-    dest: ~/.ssh/id_rsa.pub
+    content: "{{ ssh_config }}"
+    dest: ~/.ssh/config
     mode: 0644
 
-- name: Copy id_rsa
+- name: Copy ssh public keys
   copy:
-    src: id_rsa
-    dest: ~/.ssh/id_rsa
+    content: "{{ item.value }}"
+    dest: "~/.ssh/{{ item.key }}"
+    mode: 0644
+  with_dict: "{{ ssh_public_keys }}"
+
+- name: Copy ssh private keys
+  copy:
+    content: "{{ item.value }}"
+    dest: "~/.ssh/{{ item.key }}"
     mode: 0600
+  with_dict: "{{ ssh_private_keys }}"
 
 - name: Copy tmux.conf
   copy:
