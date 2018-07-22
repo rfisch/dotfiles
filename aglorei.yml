@@ -1,0 +1,7 @@
+---
+- hosts: aglorei
+  roles:
+    - git
+    - packages
+    - utils
+    - vim
