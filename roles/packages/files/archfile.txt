@@ -73,6 +73,7 @@ tar
 terraform
 texinfo
 tmux
+transmission-cli
 tree
 usbutils
 util-linux
