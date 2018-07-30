@@ -61,8 +61,6 @@ brew "node"
 brew "p7zip"
 # Tool for creating identical machine images for multiple platforms
 brew "packer"
-# Extract just secret information out of OpenPGP secret keys
-brew "paperkey"
 # Animated pipes terminal screensaver
 brew "pipes-sh"
 # Show ps output as a tree
