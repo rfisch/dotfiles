@@ -75,6 +75,7 @@ texinfo
 tmux
 transmission-cli
 tree
+unzip
 usbutils
 util-linux
 vi
