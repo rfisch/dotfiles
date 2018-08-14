@@ -73,6 +73,7 @@ tar
 terraform
 texinfo
 tmux
+traceroute
 transmission-cli
 tree
 unzip
