@@ -50,7 +50,7 @@ netctl
 netdata
 openssh
 p7zip
-packer-io
+packer
 pacman
 pciutils
 perl
