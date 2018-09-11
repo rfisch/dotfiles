@@ -8,8 +8,6 @@ tap "homebrew/services"
 tap "koekeishiya/formulae"
 cask "java"
 # GNU database manager
-brew "gdbm"
-# Interpreted, interactive, object-oriented programming language
 brew "python@2"
 # Automate deployment, configuration, and upgrading
 brew "ansible"
@@ -49,8 +47,6 @@ brew "kops"
 brew "lastpass-cli", args: ["with-pinentry"]
 # Java-based project management
 brew "maven"
-# Cross platform, open source .NET development framework
-brew "mono"
 # Fast, highly customisable system info script
 brew "neofetch"
 # Ambitious Vim-fork focused on extensibility and agility
@@ -94,8 +90,6 @@ brew "koekeishiya/formulae/skhd", args: ["with-logging"]
 cask "alfred"
 cask "authy"
 cask "docker"
-cask "dotnet"
-cask "dotnet-sdk"
 cask "firefox-beta"
 cask "font-ubuntu-mono-derivative-powerline"
 cask "google-chrome-beta"
@@ -106,7 +100,6 @@ cask "microsoft-azure-storage-explorer"
 cask "microsoft-office"
 cask "microsoft-remote-desktop-beta"
 cask "microsoft-teams"
-cask "mono-mdk"
 cask "rocket"
 cask "signal"
 cask "skype-for-business"
