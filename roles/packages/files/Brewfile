@@ -7,7 +7,7 @@ tap "homebrew/core"
 tap "homebrew/services"
 tap "koekeishiya/formulae"
 cask "java"
-# GNU database manager
+# Interpreted, interactive, object-oriented programming language
 brew "python@2"
 # Automate deployment, configuration, and upgrading
 brew "ansible"
@@ -100,6 +100,7 @@ cask "microsoft-azure-storage-explorer"
 cask "microsoft-office"
 cask "microsoft-remote-desktop-beta"
 cask "microsoft-teams"
+cask "minikube"
 cask "rocket"
 cask "signal"
 cask "skype-for-business"
