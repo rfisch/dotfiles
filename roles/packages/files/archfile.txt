@@ -42,6 +42,7 @@ lvm2
 make
 man-db
 man-pages
+maven
 mdadm
 nano
 neofetch
