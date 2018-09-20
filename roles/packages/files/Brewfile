@@ -11,6 +11,8 @@ cask "java"
 brew "python@2"
 # Automate deployment, configuration, and upgrading
 brew "ansible"
+# ARP scanning and fingerprinting tool
+brew "arp-scan"
 # Interpreted, interactive, object-oriented programming language
 brew "python"
 # Microsoft Azure CLI 2.0

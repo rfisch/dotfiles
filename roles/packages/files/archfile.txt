@@ -1,4 +1,5 @@
 ansible
+arp-scan
 bash
 bind-tools
 bzip2
