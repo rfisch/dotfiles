@@ -1,7 +1,10 @@
 ansible
 arp-scan
+autoconf
+automake
 bash
 bind-tools
+bison
 bzip2
 certbot
 cmake
@@ -12,10 +15,12 @@ dhcpcd
 diffutils
 docker
 e2fsprogs
+fakeroot
 fasd
 file
 filesystem
 findutils
+flex
 gawk
 gcc
 gcc-libs
@@ -33,6 +38,7 @@ iputils
 jdk10-openjdk
 jfsutils
 jq
+kubernetes-helm
 lastpass-cli
 less
 licenses
@@ -40,6 +46,7 @@ linux
 logrotate
 lsof
 lvm2
+m4
 make
 man-db
 man-pages
@@ -54,8 +61,10 @@ openssh
 p7zip
 packer
 pacman
+patch
 pciutils
 perl
+pkgconf
 procps-ng
 psmisc
 python
