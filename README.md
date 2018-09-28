@@ -28,7 +28,6 @@ GITPROFILE=default ansible-playbook -vv --ask-become-pass master.yml
 * Installs [chunkwm](https://github.com/koekeishiya/chunkwm)
 * Installs [skhd](https://github.com/koekeishiya/skhd)
 * Installs [Übersicht](https://github.com/felixhageloh/uebersicht)
-* Installs [Pecan](https://github.com/aglorei/Pecan.git)
 
 ## Utils Configuration
 
