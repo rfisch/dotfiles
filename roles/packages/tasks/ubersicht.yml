@@ -1,8 +1,0 @@
----
-- name: Synchronize Pecan
-  synchronize:
-    src: Pecan/
-    dest: ~/Library/Application Support/Übersicht/widgets/Pecan/
-    checksum: yes
-    recursive: yes
-    times: no
