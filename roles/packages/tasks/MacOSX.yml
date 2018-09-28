@@ -9,4 +9,3 @@
 - include_tasks: homebrew.yml
 - include_tasks: chunkwm.yml
 - include_tasks: skhd.yml
-- include_tasks: ubersicht.yml
