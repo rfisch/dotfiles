@@ -1,11 +1,17 @@
 ---
+- name: Create temporary build directory
+  tempfile:
+    state: directory
+    suffix: build
+  register: temp_dir
+
 - name: Download dein installer
   get_url:
-    url: https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh
-    dest: /tmp
+    url: "{{ dein['url'] }}"
+    dest: "{{ temp_dir.path }}"
 
 - name: Execute dein installer
-  script: "/tmp/installer.sh {{ vim_base_dir }}"
+  script: "{{ temp_dir.path }}/installer.sh {{ vim_directory }}"
   register: dein_installer
 
 - name: Print dein installer stdout

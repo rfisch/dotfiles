@@ -2,12 +2,12 @@
 - name: Copy Brewfile
   copy:
     src: Brewfile
-    dest: ~/.Brewfile
+    dest: "{{ brewfile_dest }}"
     mode: 0644
 
 - name: Cleanup packages not found in manifest
   shell: |
-    brew bundle cleanup --file=~/.Brewfile --force
+    brew bundle cleanup --file={{ brewfile_dest }} --force
   changed_when: "homebrew_cleanup.stdout_lines|length"
   register: homebrew_cleanup
 
@@ -18,7 +18,7 @@
 
 - name: Install packages from manifest
   shell: |
-    brew bundle install --file=~/.Brewfile
+    brew bundle install --file={{ brewfile_dest }}
   changed_when: "'Installed' in homebrew_install.stdout"
   register: homebrew_install
 

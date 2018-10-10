@@ -1,6 +1,7 @@
 ---
 - name: Install fzf
-  command: sh ~/.fzf/install --all
+  shell: |
+    sh {{ lookup('env', 'HOME' )}}/.fzf/install --all
   register: fzf_install
 
 - name: Print fzf install stdout

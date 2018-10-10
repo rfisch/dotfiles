@@ -1,14 +1,26 @@
 ---
+- name: Create temporary build directory
+  tempfile:
+    state: directory
+    suffix: build
+  register: temp_dir
+
 - name: Download homebrew installer
   get_url:
-    url: https://raw.githubusercontent.com/Homebrew/install/master/install
-    dest: /tmp
+    url: "{{ homebrew['url'] }}"
+    dest: "{{ temp_dir.path }}"
 
 - name: Install homebrew
-  command: /usr/bin/ruby -e /tmp/install
+  shell: |
+    /usr/bin/ruby -e {{ temp_dir.path }}/install
   register: install_homebrew
 
 - name: Print homebrew install stdout
   debug:
     var: install_homebrew.stdout_lines
     verbosity: 2
+
+- name: Remove temporary build directory
+  file:
+    path: "{{ temp_dir.path }}"
+    state: absent

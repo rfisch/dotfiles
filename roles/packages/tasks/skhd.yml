@@ -2,7 +2,7 @@
 - name: Copy skhdrc
   copy:
     src: skhdrc
-    dest: ~/.skhdrc
+    dest: "{{ skhdrc_dest }}"
     mode: 0644
   register: skhdrc_copy
 

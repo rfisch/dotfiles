@@ -1,12 +1,12 @@
 ---
-- name: Copy gitignore_global
-  copy:
-    src: gitignore_global
-    dest: ~/.gitignore_global
-    mode: 0644
-
 - name: Copy gitconfig
   template:
     src: gitconfig.j2
-    dest: ~/.gitconfig
+    dest: "{{ gitconfig_dest }}"
+    mode: 0644
+
+- name: Copy gitignore_global
+  copy:
+    src: gitignore_global
+    dest: "{{ gitignore_global_dest }}"
     mode: 0644

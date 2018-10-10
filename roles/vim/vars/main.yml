@@ -1,2 +1,7 @@
 ---
-vim_base_dir: ~/.vim/bundles
+dein:
+  url: https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh
+
+vim_config_files:
+  init.vim: "{{ lookup('env', 'HOME') }}/.config/nvim/init.vim"
+  vimrc: "{{ lookup('env', 'HOME') }}/.vimrc"

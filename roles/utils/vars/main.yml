@@ -2,3 +2,18 @@
 pinentry_path:
   Archlinux: /usr/bin/pinentry-curses
   MacOSX: /usr/local/bin/pinentry-curses
+
+util_config_files:
+  htoprc: "{{ lookup('env', 'HOME') }}/.config/htop/htoprc"
+  tmux.conf: "{{ lookup('env', 'HOME') }}/.tmux.conf"
+  zshrc: "{{ lookup('env', 'HOME') }}/.zshrc"
+
+util_config_templates:
+  gpg-agent.conf.j2: "{{ lookup('env', 'HOME') }}/.gnupg/gpg-agent.conf"
+
+util_config_synchronize:
+  base16-shell: "{{ lookup('env', 'HOME') }}/.config/base16-shell"
+  fast-syntax-highlighting: "{{ lookup('env', 'HOME') }}/.fsh"
+  fzf: "{{ lookup('env', 'HOME') }}/.fzf"
+  geometry: "{{ lookup('env', 'HOME') }}/.geometry"
+  oh-my-zsh: "{{ lookup('env', 'HOME') }}/.oh-my-zsh"
