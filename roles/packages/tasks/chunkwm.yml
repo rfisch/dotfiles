@@ -4,9 +4,4 @@
     src: chunkwmrc
     dest: "{{ chunkwmrc_dest }}"
     mode: 0755
-  register: chunkwmrc_copy
-
-- name: Restart chunkwm
-  shell: |
-    brew services restart crisidev/chunkwm/chunkwm
-  when: chunkwmrc_copy.changed
+  notify: restart-chunkwm

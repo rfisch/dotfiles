@@ -4,9 +4,5 @@
     src: skhdrc
     dest: "{{ skhdrc_dest }}"
     mode: 0644
+  notify: restart-skhd
   register: skhdrc_copy
-
-- name: Restart skhd
-  shell: |
-    brew services restart koekeishiya/formulae/skhd
-  when: skhdrc_copy.changed
