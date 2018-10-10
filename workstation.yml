@@ -1,5 +1,5 @@
 ---
-- hosts: aglorei
+- hosts: workstation
   roles:
     - git
     - packages
