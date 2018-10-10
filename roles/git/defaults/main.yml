@@ -1,0 +1,3 @@
+---
+gitconfig_dest: "{{ lookup('env', 'HOME') }}/.gitconfig"
+gitignore_global_dest: "{{ lookup('env', 'HOME') }}/.gitignore_global"

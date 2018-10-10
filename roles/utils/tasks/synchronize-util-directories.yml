@@ -1,0 +1,15 @@
+---
+- name: Synchronize util directories
+  synchronize:
+    src: "{{ config.key }}"
+    dest: "{{ config.value }}"
+    checksum: yes
+    recursive: yes
+    times: no
+  loop: "{{ util_config_synchronize|dict2items }}"
+  loop_control:
+    loop_var: config
+  register: synchronize_result
+
+- include_tasks: install-fzf.yml
+  when: synchronize_result.results[2].changed

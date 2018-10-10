@@ -2,10 +2,7 @@
 - name: Copy skhdrc
   copy:
     src: skhdrc
-    dest: ~/.skhdrc
+    dest: "{{ skhdrc_dest }}"
     mode: 0644
+  notify: restart-skhd
   register: skhdrc_copy
-
-- name: Restart skhd
-  command: brew services restart koekeishiya/formulae/skhd
-  when: skhdrc_copy.changed

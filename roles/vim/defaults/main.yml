@@ -1,0 +1,2 @@
+---
+vim_bundles_directory: "{{ lookup('env', 'HOME') }}/.vim/bundles"

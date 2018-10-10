@@ -1,25 +1,25 @@
 ---
-- name: Copy .vimrc
-  copy:
-    src: vimrc
-    dest: ~/.vimrc
-    mode: 0644
-
-- name: Ensure ~/.config/nvim
+- name: Ensure vim config directories
   file:
-    path: ~/.config/nvim
-    mode: 0755
+    path: "{{ config.value|dirname }}"
+    mode: 0700
     state: directory
+  loop: "{{ vim_config_files|dict2items }}"
+  loop_control:
+    loop_var: config
 
-- name: Copy init.vim
+- name: Copy vim config files
   copy:
-    src: init.vim
-    dest: ~/.config/nvim/init.vim
+    src: "{{ config.key }}"
+    dest: "{{ config.value }}"
     mode: 0644
+  loop: "{{ vim_config_files|dict2items }}"
+  loop_control:
+    loop_var: config
 
 - name: Check vim base directory
   stat:
-    path: "{{ vim_base_dir }}"
+    path: "{{ vim_bundles_directory }}"
   register: dircheck
 
 - include_tasks: install-dein.yml

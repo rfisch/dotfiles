@@ -1,0 +1,4 @@
+---
+brewfile_dest: "{{ lookup('env', 'HOME') }}/.Brewfile"
+chunkwmrc_dest: "{{ lookup('env', 'HOME') }}/.chunkwmrc"
+skhdrc_dest: "{{ lookup('env', 'HOME') }}/.skhdrc"
