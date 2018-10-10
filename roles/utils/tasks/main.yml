@@ -1,4 +1,4 @@
 ---
-- include_tasks: ensure-directories.yml
-- include_tasks: copy-files.yml
-- include_tasks: synchronize-directories.yml
+- import_tasks: ensure-directories.yml
+- import_tasks: copy-files.yml
+- import_tasks: synchronize-directories.yml

@@ -10,4 +10,5 @@
 
 - name: Print dein installer stdout
   debug:
-    msg: "{{ dein_installer.stdout_lines }}"
+    var: dein_installer.stdout_lines
+    verbosity: 2
