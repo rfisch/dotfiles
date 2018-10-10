@@ -11,7 +11,7 @@
     dest: "{{ temp_dir.path }}"
 
 - name: Execute dein installer
-  script: "{{ temp_dir.path }}/installer.sh {{ vim_directory }}"
+  script: "{{ temp_dir.path }}/installer.sh {{ vim_bundles_directory }}"
   register: dein_installer
 
 - name: Print dein installer stdout
