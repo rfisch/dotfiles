@@ -1,10 +1,13 @@
 ---
 - name: Check for homebrew installation
-  command: command -v brew &>/dev/null
+  shell: |
+    command -v brew &>/dev/null
+  changed_when: False
+  failed_when: False
   register: homebrew_check
 
 - include_tasks: install-homebrew.yml
-  when: homebrew_check.rc != 0
+  when: homebrew_check is failed
 
 - include_tasks: homebrew.yml
 - include_tasks: chunkwm.yml

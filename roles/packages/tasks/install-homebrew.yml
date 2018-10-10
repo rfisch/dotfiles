@@ -10,4 +10,5 @@
 
 - name: Print homebrew install stdout
   debug:
-    msg: "{{ install_homebrew.stdout_lines }}"
+    var: install_homebrew.stdout_lines
+    verbosity: 2

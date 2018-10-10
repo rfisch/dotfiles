@@ -6,20 +6,26 @@
     mode: 0644
 
 - name: Cleanup packages not found in manifest
-  command: brew bundle cleanup --file=~/.Brewfile --force
+  shell: |
+    brew bundle cleanup --file=~/.Brewfile --force
+  changed_when: "homebrew_cleanup.stdout_lines|length"
   register: homebrew_cleanup
 
 - name: Print homebrew cleanup stdout
   debug:
-    msg: "{{ homebrew_cleanup.stdout_lines }}"
+    var: homebrew_cleanup.stdout_lines
+    verbosity: 2
 
 - name: Install packages from manifest
-  command: brew bundle install --file=~/.Brewfile
+  shell: |
+    brew bundle install --file=~/.Brewfile
+  changed_when: "'Installed' in homebrew_install.stdout"
   register: homebrew_install
 
 - name: Print homebrew packages install stdout
   debug:
-    msg: "{{ homebrew_install.stdout_lines }}"
+    var: homebrew_install.stdout_lines
+    verbosity: 2
 
 - name: Update homebrew and upgrade all packages
   homebrew:
