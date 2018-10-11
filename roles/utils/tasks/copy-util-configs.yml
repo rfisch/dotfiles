@@ -55,6 +55,7 @@
   loop: "{{ ssh_public_keys|dict2items }}"
   loop_control:
     loop_var: keyfile
+  no_log: True
 
 - name: Copy ssh private keys
   copy:
@@ -64,3 +65,4 @@
   loop: "{{ ssh_private_keys|dict2items }}"
   loop_control:
     loop_var: keyfile
+  no_log: True
