@@ -49,14 +49,18 @@
 
 - name: Copy ssh public keys
   copy:
-    content: "{{ item.value }}"
-    dest: "{{ lookup('env', 'HOME') }}/.ssh/{{ item.key }}"
+    content: "{{ keyfile.value }}"
+    dest: "{{ lookup('env', 'HOME') }}/.ssh/{{ keyfile.key }}"
     mode: 0644
-  with_dict: "{{ ssh_public_keys }}"
+  loop: "{{ ssh_public_keys|dict2items }}"
+  loop_control:
+    loop_var: keyfile
 
 - name: Copy ssh private keys
   copy:
-    content: "{{ item.value }}"
-    dest: "{{ lookup('env', 'HOME') }}/.ssh/{{ item.key }}"
+    content: "{{ keyfile.value }}"
+    dest: "{{ lookup('env', 'HOME') }}/.ssh/{{ keyfile.key }}"
     mode: 0600
-  with_dict: "{{ ssh_private_keys }}"
+  loop: "{{ ssh_private_keys|dict2items }}"
+  loop_control:
+    loop_var: keyfile
