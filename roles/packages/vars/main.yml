@@ -1,6 +1,87 @@
 ---
 homebrew:
   url: https://raw.githubusercontent.com/Homebrew/install/master/install
+  taps:
+    - crisidev/chunkwm
+    - homebrew/bundle
+    - homebrew/cask
+    - homebrew/cask-fonts
+    - homebrew/cask-versions
+    - homebrew/core
+    - homebrew/services
+    - koekeishiya/formulae
+  brews:
+    - ansible
+    - arp-scan
+    - python
+    - azure-cli
+    - cmake
+    - cowsay
+    - crisidev/chunkwm/chunkwm
+    - doctl
+    - fasd
+    - figlet
+    - fortune
+    - gist
+    - git
+    - gnupg
+    - htop
+    - ifstat
+    - jq
+    - kubernetes-cli
+    - kops
+    - kubernetes-helm
+    - maven
+    - neofetch
+    - neovim
+    - node
+    - p7zip
+    - packer
+    - pipes-sh
+    - pstree
+    - python@2
+    - rbenv
+    - ripgrep
+    - telnet
+    - terraform
+    - tmux
+    - transmission
+    - tree
+    - tty-clock
+    - wget
+    - zsh
+  brews_with_options:
+    koekeishiya/formulae/skhd:
+      - with-logging
+    lastpass-cli:
+      - with-pinentry
+    vim:
+      - with-python@2
+  casks:
+    - alfred
+    - authy
+    - docker
+    - firefox-beta
+    - font-ubuntu-mono-derivative-powerline
+    - google-chrome-beta
+    - iterm2-beta
+    - java
+    - macpass
+    - mactex
+    - microsoft-azure-storage-explorer
+    - microsoft-office
+    - microsoft-remote-desktop-beta
+    - microsoft-teams
+    - minikube
+    - rocket
+    - signal
+    - skype-for-business
+    - slack-beta
+    - spotify
+    - sql-operations-studio
+    - virtualbox
+    - virtualbox-extension-pack
+    - vlc
 
 pacman:
   packages:
