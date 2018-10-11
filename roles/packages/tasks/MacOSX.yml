@@ -9,6 +9,56 @@
 - include_tasks: install-homebrew.yml
   when: homebrew_check is failed
 
-- include_tasks: homebrew.yml
+- name: Copy Brewfile
+  copy:
+    src: Brewfile
+    dest: "{{ brewfile_dest }}"
+    mode: 0644
+
+- name: Cleanup packages not found in manifest
+  shell: |
+    brew bundle cleanup --file={{ brewfile_dest }} --force
+  changed_when: "homebrew_cleanup.stdout_lines|length"
+  register: homebrew_cleanup
+
+- name: Print homebrew cleanup stdout
+  debug:
+    var: homebrew_cleanup.stdout_lines
+    verbosity: 2
+
+- name: Tap external repositories
+  homebrew_tap:
+    name: "{{ homebrew['taps'] }}"
+    state: present
+
+- name: Install homebrew packages
+  homebrew:
+    name: "{{ homebrew['brews'] }}"
+    state: present
+
+- name: Install homebrew packages with options
+  homebrew:
+    name: "{{ package.key }}"
+    install_options: "{{ package.value }}"
+    state: present
+  loop: "{{ homebrew['brews_with_options']|dict2items }}"
+  loop_control:
+    loop_var: package
+
+- name: Install homebrew casks
+  homebrew_cask:
+    name: "{{ homebrew['casks'] }}"
+    greedy: yes
+    state: present
+
+- name: Update homebrew and upgrade all packages
+  homebrew:
+    update_homebrew: yes
+    upgrade_all: yes
+
+- name: Update homebrew cask and upgrade all packages
+  homebrew_cask:
+    upgrade_all: true
+
 - include_tasks: chunkwm.yml
 - include_tasks: skhd.yml
