@@ -7,7 +7,6 @@
 
 - name: Install packages from manifest
   pacman:
-    name: "{{ item }}"
+    name: Archfile
     state: latest
-  with_file: archfile.txt
   become: yes
