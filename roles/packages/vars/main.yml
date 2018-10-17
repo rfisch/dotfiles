@@ -79,6 +79,7 @@ homebrew:
     - slack-beta
     - spotify
     - sql-operations-studio
+    - steam
     - virtualbox
     - virtualbox-extension-pack
     - vlc
