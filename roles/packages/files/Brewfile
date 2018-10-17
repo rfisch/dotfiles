@@ -8,13 +8,11 @@ tap "homebrew/services"
 tap "koekeishiya/formulae"
 cask "java"
 # Interpreted, interactive, object-oriented programming language
-brew "python@2"
+brew "python"
 # Automate deployment, configuration, and upgrading
 brew "ansible"
 # ARP scanning and fingerprinting tool
 brew "arp-scan"
-# Interpreted, interactive, object-oriented programming language
-brew "python"
 # Microsoft Azure CLI 2.0
 brew "azure-cli"
 # Cross-platform make
@@ -65,6 +63,8 @@ brew "packer"
 brew "pipes-sh"
 # Show ps output as a tree
 brew "pstree"
+# Interpreted, interactive, object-oriented programming language
+brew "python@2"
 # Ruby version manager
 brew "rbenv"
 # Search tool like grep and The Silver Searcher
