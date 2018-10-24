@@ -126,7 +126,6 @@ pacman:
     - jdk10-openjdk
     - jfsutils
     - jq
-    - kubernetes-helm
     - lastpass-cli
     - less
     - licenses
@@ -153,6 +152,7 @@ pacman:
     - pciutils
     - perl
     - pkgconf
+    - postgresql
     - procps-ng
     - psmisc
     - python
