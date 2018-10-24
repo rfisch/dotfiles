@@ -61,6 +61,8 @@ brew "p7zip"
 brew "packer"
 # Animated pipes terminal screensaver
 brew "pipes-sh"
+# Object-relational database system
+brew "postgresql"
 # Show ps output as a tree
 brew "pstree"
 # Interpreted, interactive, object-oriented programming language

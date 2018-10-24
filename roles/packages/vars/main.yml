@@ -38,6 +38,7 @@ homebrew:
     - p7zip
     - packer
     - pipes-sh
+    - postgresql
     - pstree
     - python@2
     - rbenv
