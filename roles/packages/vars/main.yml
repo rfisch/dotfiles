@@ -36,6 +36,7 @@ homebrew:
     - node
     - p7zip
     - packer
+    - pipenv
     - pipes-sh
     - postgresql
     - pstree
@@ -115,6 +116,7 @@ pacman:
     - postgresql
     - python
     - python-neovim
+    - python-pipenv
     - python2-neovim
     - ripgrep
     - rsync
