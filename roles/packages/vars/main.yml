@@ -30,6 +30,7 @@ homebrew:
     - jq
     - kubernetes-cli
     - kubernetes-helm
+    - lastpass-cli
     - maven
     - neofetch
     - neovim
@@ -54,8 +55,6 @@ homebrew:
   brews_with_options:
     koekeishiya/formulae/skhd:
       - with-logging
-    lastpass-cli:
-      - with-pinentry
     vim:
       - with-python@2
   casks:
