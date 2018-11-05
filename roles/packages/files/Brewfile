@@ -44,7 +44,7 @@ brew "kubernetes-cli"
 # The Kubernetes package manager
 brew "kubernetes-helm"
 # LastPass command-line interface tool
-brew "lastpass-cli", args: ["with-pinentry"]
+brew "lastpass-cli"
 # Java-based project management
 brew "maven"
 # Fast, highly customisable system info script
@@ -57,6 +57,8 @@ brew "node"
 brew "p7zip"
 # Tool for creating identical machine images for multiple platforms
 brew "packer"
+# Python dependency management tool
+brew "pipenv"
 # Animated pipes terminal screensaver
 brew "pipes-sh"
 # Object-relational database system

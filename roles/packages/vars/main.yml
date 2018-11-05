@@ -30,12 +30,14 @@ homebrew:
     - jq
     - kubernetes-cli
     - kubernetes-helm
+    - lastpass-cli
     - maven
     - neofetch
     - neovim
     - node
     - p7zip
     - packer
+    - pipenv
     - pipes-sh
     - postgresql
     - pstree
@@ -53,8 +55,6 @@ homebrew:
   brews_with_options:
     koekeishiya/formulae/skhd:
       - with-logging
-    lastpass-cli:
-      - with-pinentry
     vim:
       - with-python@2
   casks:
@@ -115,6 +115,7 @@ pacman:
     - postgresql
     - python
     - python-neovim
+    - python-pipenv
     - python2-neovim
     - ripgrep
     - rsync
