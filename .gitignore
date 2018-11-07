@@ -22,7 +22,7 @@
 
 # Python #
 ##########
-env
+.venv
 
 # Logs and databases #
 ######################
