@@ -11,7 +11,6 @@ homebrew:
     - homebrew/services
     - koekeishiya/formulae
   brews:
-    - ansible
     - arp-scan
     - python
     - azure-cli
@@ -90,7 +89,6 @@ pacman:
     - base
     - base-devel
     # individual
-    - ansible
     - arp-scan
     - bind-tools
     - certbot
