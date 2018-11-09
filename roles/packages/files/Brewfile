@@ -1,6 +1,7 @@
 tap "crisidev/chunkwm"
 tap "homebrew/bundle"
 tap "homebrew/cask"
+tap "homebrew/cask-drivers"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
@@ -17,6 +18,8 @@ brew "azure-cli"
 brew "cmake"
 # Configurable talking characters in ASCII art
 brew "cowsay"
+# USB programmer
+brew "dfu-util"
 # Command-line tool for DigitalOcean
 brew "doctl"
 # CLI tool for quick access to files and directories
@@ -98,6 +101,7 @@ cask "firefox-beta"
 cask "font-ubuntu-mono-derivative-powerline"
 cask "google-chrome-beta"
 cask "iterm2-beta"
+cask "kiibohd-configurator"
 cask "macpass"
 cask "mactex"
 cask "microsoft-azure-storage-explorer"
