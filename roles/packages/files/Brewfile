@@ -8,10 +8,10 @@ tap "homebrew/core"
 tap "homebrew/services"
 tap "koekeishiya/formulae"
 cask "java"
-# Interpreted, interactive, object-oriented programming language
-brew "python"
 # ARP scanning and fingerprinting tool
 brew "arp-scan"
+# Interpreted, interactive, object-oriented programming language
+brew "python"
 # Microsoft Azure CLI 2.0
 brew "azure-cli"
 # Cross-platform make
