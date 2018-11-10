@@ -52,6 +52,8 @@ brew "maven"
 brew "neofetch"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Distributed real-time performance and health monitoring
+brew "netdata", restart_service: true
 # Platform built on V8 to build network applications
 brew "node"
 # 7-Zip (high compression file archiver) implementation

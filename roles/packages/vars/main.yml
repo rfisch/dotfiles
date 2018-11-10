@@ -33,6 +33,7 @@ homebrew:
     - maven
     - neofetch
     - neovim
+    - netdata
     - node
     - p7zip
     - packer
