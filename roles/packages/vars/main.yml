@@ -5,6 +5,7 @@ homebrew:
     - crisidev/chunkwm
     - homebrew/bundle
     - homebrew/cask
+    - homebrew/cask-drivers
     - homebrew/cask-fonts
     - homebrew/cask-versions
     - homebrew/core
@@ -17,6 +18,7 @@ homebrew:
     - cmake
     - cowsay
     - crisidev/chunkwm/chunkwm
+    - dfu-util
     - doctl
     - fasd
     - figlet
@@ -65,6 +67,7 @@ homebrew:
     - font-ubuntu-mono-derivative-powerline
     - google-chrome-beta
     - iterm2-beta
+    - kiibohd-configurator
     - java
     - macpass
     - mactex
