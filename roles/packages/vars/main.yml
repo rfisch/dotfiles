@@ -52,13 +52,12 @@ homebrew:
     - transmission
     - tree
     - tty-clock
+    - vim
     - wget
     - zsh
   brews_with_options:
     koekeishiya/formulae/skhd:
       - with-logging
-    vim:
-      - with-python@2
   casks:
     - alfred
     - authy

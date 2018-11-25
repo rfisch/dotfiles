@@ -87,7 +87,7 @@ brew "tree"
 # Digital clock in ncurses
 brew "tty-clock"
 # Vi 'workalike' with many additional features
-brew "vim", args: ["with-python@2"]
+brew "vim"
 # Internet file retriever
 brew "wget"
 # UNIX shell (command interpreter)
