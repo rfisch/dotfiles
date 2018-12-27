@@ -2,7 +2,6 @@
 homebrew:
   url: https://raw.githubusercontent.com/Homebrew/install/master/install
   taps:
-    - crisidev/chunkwm
     - homebrew/bundle
     - homebrew/cask
     - homebrew/cask-drivers
@@ -17,7 +16,7 @@ homebrew:
     - azure-cli
     - cmake
     - cowsay
-    - crisidev/chunkwm/chunkwm
+    - koekeishiya/formulae/chunkwm
     - dfu-util
     - doctl
     - fasd

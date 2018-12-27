@@ -1,9 +1,9 @@
 ---
 - name: restart-chunkwm
   shell: |
-    brew services restart crisidev/chunkwm/chunkwm
+    brew services restart chunkwm
 
 - name: restart-skhd
   shell: |
-    brew services restart koekeishiya/formulae/skhd
+    brew services restart skhd
   when: skhdrc_copy.changed

@@ -1,4 +1,3 @@
-tap "crisidev/chunkwm"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-drivers"
@@ -93,7 +92,7 @@ brew "wget"
 # UNIX shell (command interpreter)
 brew "zsh"
 # Tiling window manager for macOS based on plugin architecture
-brew "crisidev/chunkwm/chunkwm"
+brew "koekeishiya/formulae/chunkwm"
 # Simple hotkey-daemon for macOS.
 brew "koekeishiya/formulae/skhd", args: ["with-logging"]
 cask "alfred"
