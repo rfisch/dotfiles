@@ -67,12 +67,8 @@ homebrew:
     - iterm2-beta
     - kiibohd-configurator
     - java
-    - macpass
     - mactex
-    - microsoft-azure-storage-explorer
-    - microsoft-office
     - microsoft-remote-desktop-beta
-    - microsoft-teams
     - minikube
     - rocket
     - signal
@@ -82,7 +78,6 @@ homebrew:
     - sql-operations-studio
     - steam
     - vlc
-
 pacman:
   packages:
     # groups
