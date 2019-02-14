@@ -14,6 +14,5 @@ util_config_templates:
 util_config_synchronize:
   base16-shell: "{{ lookup('env', 'HOME') }}/.config/base16-shell"
   fast-syntax-highlighting: "{{ lookup('env', 'HOME') }}/.fsh"
-  fzf: "{{ lookup('env', 'HOME') }}/.fzf"
   geometry: "{{ lookup('env', 'HOME') }}/.geometry"
   oh-my-zsh: "{{ lookup('env', 'HOME') }}/.oh-my-zsh"

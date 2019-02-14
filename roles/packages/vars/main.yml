@@ -23,6 +23,7 @@ homebrew:
     - fd
     - figlet
     - fortune
+    - fzf
     - gist
     - git
     - gnupg
@@ -92,6 +93,7 @@ pacman:
     - docker
     - fasd
     - fd
+    - fzf
     - gist
     - git
     - grub

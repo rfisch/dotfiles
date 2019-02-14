@@ -10,6 +10,3 @@
   loop_control:
     loop_var: config
   register: synchronize_result
-
-- include_tasks: install-fzf.yml
-  when: synchronize_result.results[2].changed
