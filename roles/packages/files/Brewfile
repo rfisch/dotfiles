@@ -29,6 +29,8 @@ brew "fd"
 brew "figlet"
 # Infamous electronic fortune-cookie generator
 brew "fortune"
+# Command-line fuzzy finder written in Go
+brew "fzf"
 # Command-line utility for uploading Gists
 brew "gist"
 # Distributed revision control system
