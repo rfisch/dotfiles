@@ -84,7 +84,9 @@ if command -v rbenv &>/dev/null; then
 fi
 
 # fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+if command -v fzf &>/dev/null; then
+  [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+fi
 
 # python2 brew keg
 [ -d /usr/local/opt/python@2/bin ] && PATH="/usr/local/opt/python@2/bin:$PATH"
