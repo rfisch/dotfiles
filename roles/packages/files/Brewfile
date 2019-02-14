@@ -23,6 +23,8 @@ brew "dfu-util"
 brew "doctl"
 # CLI tool for quick access to files and directories
 brew "fasd"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
 # Banner-like program prints strings as ASCII art
 brew "figlet"
 # Infamous electronic fortune-cookie generator
