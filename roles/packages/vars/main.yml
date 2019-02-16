@@ -17,7 +17,6 @@ homebrew:
     - cmake
     - cowsay
     - koekeishiya/formulae/chunkwm
-    - dfu-util
     - doctl
     - fasd
     - fd
@@ -33,7 +32,6 @@ homebrew:
     - kubernetes-cli
     - kubernetes-helm
     - lastpass-cli
-    - maven
     - neofetch
     - neovim
     - netdata
@@ -70,14 +68,11 @@ homebrew:
     - kiibohd-configurator
     - java
     - mactex
-    - microsoft-remote-desktop-beta
     - minikube
     - rocket
     - signal
-    - skype-for-business
     - slack-beta
     - spotify
-    - sql-operations-studio
     - steam
     - vlc
 pacman:

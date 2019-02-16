@@ -17,8 +17,6 @@ brew "azure-cli"
 brew "cmake"
 # Configurable talking characters in ASCII art
 brew "cowsay"
-# USB programmer
-brew "dfu-util"
 # Command-line tool for DigitalOcean
 brew "doctl"
 # CLI tool for quick access to files and directories
@@ -49,8 +47,6 @@ brew "kubernetes-cli"
 brew "kubernetes-helm"
 # LastPass command-line interface tool
 brew "lastpass-cli"
-# Java-based project management
-brew "maven"
 # Fast, highly customisable system info script
 brew "neofetch"
 # Ambitious Vim-fork focused on extensibility and agility
@@ -108,13 +104,10 @@ cask "google-chrome-beta"
 cask "iterm2-beta"
 cask "kiibohd-configurator"
 cask "mactex"
-cask "microsoft-remote-desktop-beta"
 cask "minikube"
 cask "rocket"
 cask "signal"
-cask "skype-for-business"
 cask "slack-beta"
 cask "spotify"
-cask "sql-operations-studio"
 cask "steam"
 cask "vlc"
