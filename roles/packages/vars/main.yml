@@ -43,7 +43,6 @@ homebrew:
     - postgresql
     - pstree
     - python@2
-    - rbenv
     - ripgrep
     - telnet
     - terraform

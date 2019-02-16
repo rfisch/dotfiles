@@ -68,8 +68,6 @@ brew "postgresql"
 brew "pstree"
 # Interpreted, interactive, object-oriented programming language
 brew "python@2"
-# Ruby version manager
-brew "rbenv"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # User interface to the TELNET protocol (built from macOS Sierra sources)
