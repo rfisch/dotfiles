@@ -70,11 +70,14 @@ homebrew:
     - kiibohd-configurator
     - java
     - mactex
+    - microsoft-remote-desktop-beta
     - minikube
     - rocket
     - signal
+    - skype-for-business
     - slack-beta
     - spotify
+    - sql-operations-studio
     - steam
     - vlc
 pacman:
