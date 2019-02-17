@@ -5,6 +5,13 @@
     update_cache: yes
   become: yes
 
+- name: Enable and start cronie
+  systemd:
+    name: cronie
+    enabled: yes
+    state: started
+  become: yes
+
 - name: Create crontab entry to clone/pull git repository
   template:
     src: etc_cron.d_ansible-pull.j2
@@ -12,6 +19,7 @@
     owner: "{{ ansible_user_id }}"
     group: "{{ ansible_user_id }}"
     mode: 0644
+  become: yes
 
 - name: Create logrotate entry for ansible-pull.log
   template:
@@ -20,3 +28,4 @@
     owner: "{{ ansible_user_id }}"
     group: "{{ ansible_user_id }}"
     mode: 0644
+  become: yes
