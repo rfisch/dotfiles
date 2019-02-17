@@ -1,0 +1,2 @@
+[workstation]
+Tienlongs-MacBook-Pro ansible_connection=local
