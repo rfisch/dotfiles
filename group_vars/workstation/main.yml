@@ -1,0 +1,6 @@
+---
+# set all vaulted variables in subgroup
+git_user: "{{ vault_git_user }}"
+ssh_config: "{{ vault_ssh_config }}"
+ssh_public_keys: "{{ vault_ssh_public_keys }}"
+ssh_private_keys: "{{ vault_ssh_private_keys }}"
