@@ -1,8 +1,8 @@
-[workstation]
-aglorei
-
-[aglorei]
-aglorei-personal
-
 [aglorei-personal]
 Tienlongs-MacBook-Pro ansible_connection=local
+
+[aglorei:children]
+aglorei-personal
+
+[workstation:children]
+aglorei
