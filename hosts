@@ -1,5 +1,2 @@
-[aglorei]
-Tienlongs-MacBook-Pro ansible_connection=local
-
 [workstation]
-aglorei
+Tienlongs-MacBook-Pro ansible_connection=local

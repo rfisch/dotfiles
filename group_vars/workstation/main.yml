@@ -1,6 +1,6 @@
 ---
 git_core:
-  editor: nvim
+  editor: vim
 
 git_user: "{{ vault_git_user }}"
 
