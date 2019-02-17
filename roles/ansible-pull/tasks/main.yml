@@ -1,8 +1,9 @@
 ---
-- name: Install ansible
+- name: Install dependencies
   pacman:
-    name: ansible
+    name: "{{ pacman['packages'] }}"
     update_cache: yes
+    state: latest
   become: yes
 
 - name: Enable and start cronie

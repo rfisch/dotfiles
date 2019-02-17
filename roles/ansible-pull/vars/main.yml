@@ -1,5 +1,10 @@
 ---
-schedule: '*/15 * * * *'
 logfile: /var/log/ansible-pull.log
-workdir: /tmp/dotfiles
 repo_url: git://github.com/aglorei/dotfiles.git
+schedule: '*/15 * * * *'
+workdir: /tmp/dotfiles
+
+pacman:
+  packages:
+    - ansible
+    - cronie
