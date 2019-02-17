@@ -1,0 +1,22 @@
+---
+- name: Install ansible
+  pacman:
+    name: ansible
+    update_cache: yes
+  become: yes
+
+- name: Create crontab entry to clone/pull git repository
+  template:
+    src: etc_cron.d_ansible-pull.j2
+    dest: /etc/cron.d/ansible-pull
+    owner: "{{ ansible_user_id }}"
+    group: "{{ ansible_user_id }}"
+    mode: 0644
+
+- name: Create logrotate entry for ansible-pull.log
+  template:
+    src: etc_logrotate.d_ansible-pull.j2
+    dest: /etc/logrotate.d/ansible-pull
+    owner: "{{ ansible_user_id }}"
+    group: "{{ ansible_user_id }}"
+    mode: 0644
