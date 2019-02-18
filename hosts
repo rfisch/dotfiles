@@ -1,6 +1,7 @@
 [aglorei-personal]
 lithium               ansible_connection=local
 Tienlongs-MacBook-Pro ansible_connection=local
+S03122-MBPR           ansible_connection=local
 
 [aglorei:children]
 aglorei-personal
