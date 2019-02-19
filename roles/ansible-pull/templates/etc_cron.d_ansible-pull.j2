@@ -1,2 +1,1 @@
-# Cron job to git clone/pull a repo and then run locally
-{{ schedule }} {{ ansible_user_id }} ANSIBLE_FORCE_COLOR=1 ansible-pull -C ansible-pull -d {{ workdir }} -U {{ repo_url }} --vault-id {{ vault_id }}@{{ vault_password_file }} >>{{ logfile }} 2>&1
+{{ schedule }} {{ ansible_user_id }} ANSIBLE_FORCE_COLOR=1 ansible-pull -vv -d {{ workdir }} -U {{ repo_url }} --vault-id {{ vault_id }}@{{ vault_password_file }} >>{{ logfile }} 2>&1
