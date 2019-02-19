@@ -1,8 +1,8 @@
 ---
 - name: Synchronize util directories
   synchronize:
-    src: "{{ config.key }}"
-    dest: "{{ config.value }}"
+    src: "{{ config.key }}/"
+    dest: "{{ config.value }}/"
     checksum: yes
     recursive: yes
     times: no
