@@ -4,15 +4,15 @@ pinentry_path:
   MacOSX: /usr/local/bin/pinentry-curses
 
 util_config_files:
-  htoprc: "{{ lookup('env', 'HOME') }}/.config/htop/htoprc"
-  tmux.conf: "{{ lookup('env', 'HOME') }}/.tmux.conf"
+  htoprc: "{{ ansible_user_dir }}/.config/htop/htoprc"
+  tmux.conf: "{{ ansible_user_dir }}/.tmux.conf"
 
 util_config_templates:
-  gpg-agent.conf.j2: "{{ lookup('env', 'HOME') }}/.gnupg/gpg-agent.conf"
-  zshrc.j2: "{{ lookup('env', 'HOME') }}/.zshrc"
+  gpg-agent.conf.j2: "{{ ansible_user_dir }}/.gnupg/gpg-agent.conf"
+  zshrc.j2: "{{ ansible_user_dir }}/.zshrc"
 
 util_config_synchronize:
-  base16-shell: "{{ lookup('env', 'HOME') }}/.config/base16-shell"
-  fast-syntax-highlighting: "{{ lookup('env', 'HOME') }}/.fsh"
-  geometry: "{{ lookup('env', 'HOME') }}/.geometry"
-  oh-my-zsh: "{{ lookup('env', 'HOME') }}/.oh-my-zsh"
+  base16-shell: "{{ ansible_user_dir }}/.config/base16-shell"
+  fast-syntax-highlighting: "{{ ansible_user_dir }}/.fsh"
+  geometry: "{{ ansible_user_dir }}/.geometry"
+  oh-my-zsh: "{{ ansible_user_dir }}/.oh-my-zsh"

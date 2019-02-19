@@ -1,4 +1,4 @@
 ---
-brewfile_dest: "{{ lookup('env', 'HOME') }}/.Brewfile"
-chunkwmrc_dest: "{{ lookup('env', 'HOME') }}/.chunkwmrc"
-skhdrc_dest: "{{ lookup('env', 'HOME') }}/.skhdrc"
+brewfile_dest: "{{ ansible_user_dir }}/.Brewfile"
+chunkwmrc_dest: "{{ ansible_user_dir }}/.chunkwmrc"
+skhdrc_dest: "{{ ansible_user_dir }}/.skhdrc"

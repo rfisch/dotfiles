@@ -3,5 +3,5 @@ dein:
   url: https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh
 
 vim_config_files:
-  init.vim: "{{ lookup('env', 'HOME') }}/.config/nvim/init.vim"
-  vimrc: "{{ lookup('env', 'HOME') }}/.vimrc"
+  init.vim: "{{ ansible_user_dir }}/.config/nvim/init.vim"
+  vimrc: "{{ ansible_user_dir }}/.vimrc"
