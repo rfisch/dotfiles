@@ -111,7 +111,6 @@ pacman:
     - python
     - python-neovim
     - python-pipenv
-    - python2-neovim
     - ripgrep
     - rsync
     - strongswan
