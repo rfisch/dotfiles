@@ -1,5 +1,5 @@
 ---
-- hosts: workstation
+- hosts: workstation:localhost
   roles:
     - git
     - packages
