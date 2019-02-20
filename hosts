@@ -11,3 +11,6 @@ aglorei-work
 
 [workstation:children]
 aglorei
+
+[workstation]
+localhost             ansible_connection=local
