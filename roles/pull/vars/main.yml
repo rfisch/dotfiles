@@ -1,11 +1,5 @@
 ---
-cron:
-  Archlinux: /etc/cron.d
-  MacOSX: /usr/lib/cron/tabs
 logfile: /var/log/dotfiles.log
-logrotate_dest:
-  Archlinux: /etc/logrotate.d
-  MacOSX: /usr/local/etc/logrotate.d
 repo_url: git://github.com/aglorei/dotfiles.git
 schedule: '*/15 * * * *'
 workdir: /tmp/dotfiles
