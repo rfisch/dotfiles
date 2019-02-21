@@ -1,3 +1,0 @@
----
-vault_id: aglorei
-vault_password_file: "{{ ansible_user_dir }}/.ansible-vault-password-dotfiles"
