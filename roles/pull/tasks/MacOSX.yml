@@ -4,3 +4,12 @@
     name: "{{ homebrew['brews'] }}"
     state: present
   notify: restart-logrotate
+
+- name: Create launchd entry to clone/pull git repository
+  template:
+    src: library_launchagents_dotfiles.j2
+    dest: "/Library/LaunchAgents/com.{{ ansible_user_id }}.dotfiles.plist"
+    owner: root
+    group: root
+    mode: 0644
+  become: yes
