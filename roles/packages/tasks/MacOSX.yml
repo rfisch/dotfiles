@@ -1,14 +1,4 @@
 ---
-- name: Check for homebrew installation
-  shell: |
-    command -v brew &>/dev/null
-  changed_when: False
-  failed_when: False
-  register: homebrew_check
-
-- include_tasks: install-homebrew.yml
-  when: homebrew_check is failed
-
 - name: Copy Brewfile
   copy:
     src: Brewfile

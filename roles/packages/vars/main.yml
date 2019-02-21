@@ -33,6 +33,7 @@ homebrew:
     - kubernetes-cli
     - kubernetes-helm
     - lastpass-cli
+    - logrotate
     - neofetch
     - neovim
     - netdata
@@ -41,7 +42,6 @@ homebrew:
     - packer
     - pipenv
     - pipes-sh
-    - postgresql
     - pstree
     - python@2
     - ripgrep
@@ -107,7 +107,6 @@ pacman:
     - openssh
     - p7zip
     - packer
-    - postgresql
     - python
     - python-neovim
     - python-pipenv

@@ -1,0 +1,31 @@
+---
+- name: Install pacman dependencies
+  pacman:
+    name: "{{ pacman['packages'] }}"
+    update_cache: yes
+    state: latest
+  become: yes
+
+- name: Enable and start cronie
+  systemd:
+    name: cronie
+    enabled: yes
+    state: started
+  become: yes
+
+- name: Add ansible-pull to root crontab
+  cron:
+    name: "dotfiles"
+    minute: "*/15"
+    job: "su -l {{ ansible_user_id }} -c '{{ cron_command }}' >>{{ logfile }} 2>&1"
+    user: root
+  become: yes
+
+- name: Create logrotate entry for dotfiles.log
+  template:
+    src: etc_logrotate.d_dotfiles.j2
+    dest: /etc/logrotate.d/dotfiles
+    owner: root
+    group: root
+    mode: 0644
+  become: yes

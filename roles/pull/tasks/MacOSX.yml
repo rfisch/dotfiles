@@ -1,0 +1,8 @@
+---
+- name: Install homebrew dependencies
+  homebrew:
+    name: "{{ homebrew['brews'] }}"
+    state: present
+  notify: restart-logrotate
+
+# Add launchd plist once pull/45541 is merged
