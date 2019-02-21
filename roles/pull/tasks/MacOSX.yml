@@ -8,8 +8,8 @@
 - name: Create launchd entry to clone/pull git repository
   template:
     src: library_launchagents_dotfiles.j2
-    dest: "/Library/LaunchAgents/com.{{ ansible_user_id | regex_replace('\.', '') }}.dotfiles.plist"
+    dest: "/Library/LaunchAgents/com.{{ ansible_user_id | regex_replace('\\.', '') }}.dotfiles.plist"
     owner: root
-    group: root
+    group: wheel
     mode: 0644
   become: yes
