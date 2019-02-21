@@ -1,17 +1,6 @@
 ---
-- name: Install dependencies
-  pacman:
-    name: "{{ pacman['packages'] }}"
-    update_cache: yes
-    state: latest
-  become: yes
-
-- name: Enable and start cronie
-  systemd:
-    name: cronie
-    enabled: yes
-    state: started
-  become: yes
+- name: "Including {{ ansible_distribution }} tasks"
+  include_tasks: "{{ ansible_distribution }}.yml"
 
 - name: Create crontab entry to clone/pull git repository
   template:
