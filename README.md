@@ -18,7 +18,7 @@ ansible-playbook --limit localhost local.yml
 
 ### Ansible Pull
 
-The [local.yml](local.yml) playbook can also be executed using [ansible-pull](https://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html#ansible-pull) by using the [pull.yml](pull.yml) playbook, which schedules the ansible-pull execution on a cron schedule, allowing for the upstream changes to propogate to the host in an eventually consistent manner.
+The [local.yml](local.yml) playbook can also be executed using [ansible-pull](https://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html#ansible-pull) by using the [pull.yml](pull.yml) playbook, which schedules the ansible-pull execution on a cron schedule, allowing for the upstream changes to propogate to the host in an eventually consistent manner. The underlying cron tool used varies by operating system: Arch Linux will rely on [cronie](https://wiki.archlinux.org/index.php/Cron#Cronie_2), while Mac OSX will use the native launchd function.
 
 ```sh
 ansible-playbook --limit localhost pull.yml
