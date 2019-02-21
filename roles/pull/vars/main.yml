@@ -4,6 +4,10 @@ repo_url: git://github.com/aglorei/dotfiles.git
 schedule: '*/15 * * * *'
 workdir: /tmp/dotfiles
 
+homebrew:
+  brews:
+    - ansible
+    - logrotate
 pacman:
   packages:
     - ansible

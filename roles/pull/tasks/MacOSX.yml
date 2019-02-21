@@ -1,0 +1,6 @@
+---
+- name: Install homebrew dependencies
+  homebrew:
+    name: "{{ homebrew['brews']} }"
+    state: present
+  notify: restart-logrotate

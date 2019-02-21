@@ -1,0 +1,4 @@
+---
+- name: restart-logrotate
+  shell: |
+    brew services restart logrotate
