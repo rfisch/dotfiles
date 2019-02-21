@@ -5,7 +5,7 @@
 - name: Create crontab entry to clone/pull git repository
   template:
     src: etc_cron.d_ansible-pull.j2
-    dest: /etc/cron.d/dotfiles
+    dest: "{{ cron[ansible_distribution] }}/dotfiles"
     owner: root
     group: root
     mode: 0644
@@ -14,7 +14,7 @@
 - name: Create logrotate entry for ansible-pull.log
   template:
     src: etc_logrotate.d_ansible-pull.j2
-    dest: /etc/logrotate.d/dotfiles
+    dest: "{{ logrotate_dest[ansible_distribution] }}/dotfiles"
     owner: root
     group: root
     mode: 0644
