@@ -1,1 +1,1 @@
-{{ schedule }} {{ ansible_user_id }} ANSIBLE_FORCE_COLOR=1 ansible-pull -vv -d {{ workdir }} -U {{ repo_url }} --vault-id {{ vault_id }}@{{ vault_password_file }} >>{{ logfile }} 2>&1
+{{ schedule }} {{ ansible_user_id }} ANSIBLE_FORCE_COLOR=1 ansible-pull -vv -d {{ workdir }} -U {{ repo_url }} --limit $(hostname -s) --vault-id {{ vault_id }}@{{ vault_password_file }} >>{{ logfile }} 2>&1
