@@ -61,7 +61,7 @@ For those who would enjoy configuring their workstation ssh configuration and gi
 2. If added as a direct child to the `workstation` group, ensure a `host_vars/$(hostname)/main.yml` created. If added to a subgroup of `workstation`, ensure `group_vars/$(subgroup)/main.yml` is created. If needed, add / substitute for `main_vault.yml` variants for vaulted variables.
 3. Ensure that all `vault_`-prefixed variables in the [workstation variable manifest](group_vars/workstation/main.yml) is defined in the `main.yml` or `main_vault.yml` file for your hostname or group.
 
-From here, the host variables are picked up by specifying `limit $(hostname)`:
+From here, the host variables are picked up by specifying `--limit $(hostname)`:
 
 ```sh
 ansible-playbook --limit $(hostname) local.yml # optional --vault-id id@/path/to/vault-password
