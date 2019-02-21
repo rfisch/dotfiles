@@ -21,7 +21,6 @@ ansible-playbook --limit localhost local.yml
 * Creates a link to [Brewfile](roles/packages/files/Brewfile) in $HOME
 * Installs [chunkwm](https://github.com/koekeishiya/chunkwm)
 * Installs [skhd](https://github.com/koekeishiya/skhd)
-* Installs [Übersicht](https://github.com/felixhageloh/uebersicht)
 
 ### Utilities
 
