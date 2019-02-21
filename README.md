@@ -4,14 +4,24 @@
 
 ## Purpose
 
-This repository uses [ansible](https://github.com/ansible/ansible) to install dotfiles and maintain package installations using OS managers. Currently, the default dotfiles configurations and package manifests are my own, and exist for MacOSX and Arch Linux. My sensitive vars files are separated by inventory group and encrypted with [ansible-vault](https://docs.ansible.com/ansible/latest/user_guide/vault.html).
+This repository uses [ansible](https://github.com/ansible/ansible) to install dotfiles and maintain package installations using OS managers. Currently, the default dotfiles configurations and package manifests are my own, and exist for MacOSX and Arch Linux. My sensitive vars files are separated by inventory group and encrypted with [ansible-vault](https://docs.ansible.com/ansible/latest/user_guide/vault.html). The entrypoint playbook that specifies the role order is [local.yml](local.yml).
 
 ## Vanilla Use
 
-The inventory groups and roles are written in such a way where specifying a --limit flag of localhost bypasses the reading of vaulted material, providing for a generic configuration of various tools and OS-specific package installations.
+### Ansible Playbook
+
+The inventory groups and roles are written in such a way where specifying `--limit localhost` bypasses the reading of vaulted material, providing for a generic configuration of various tools and OS-specific package installations.
 
 ```sh
 ansible-playbook --limit localhost local.yml
+```
+
+### Ansible Pull
+
+The [local.yml](local.yml) playbook can also be executed using [ansible-pull](https://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html#ansible-pull) by using the [pull.yml](pull.yml) playbook, which schedules the ansible-pull execution on a cron schedule, allowing for the upstream changes to propogate to the host in an eventually consistent manner.
+
+```sh
+ansible-playbook --limit localhost pull.yml
 ```
 
 ## Vanilla Configurations
