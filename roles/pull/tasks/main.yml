@@ -13,19 +13,10 @@
     state: started
   become: yes
 
-- name: Ensure log directory
-  file:
-    path: "{{ logfile | dirname }}"
-    mode: 0700
-    owner: "{{ ansible_user_id }}"
-    group: "{{ ansible_user_gid }}"
-    state: directory
-  become: yes
-
 - name: Create crontab entry to clone/pull git repository
   template:
     src: etc_cron.d_ansible-pull.j2
-    dest: /etc/cron.d/ansible-pull
+    dest: /etc/cron.d/dotfiles
     owner: root
     group: root
     mode: 0644
@@ -34,7 +25,7 @@
 - name: Create logrotate entry for ansible-pull.log
   template:
     src: etc_logrotate.d_ansible-pull.j2
-    dest: /etc/logrotate.d/ansible-pull
+    dest: /etc/logrotate.d/dotfiles
     owner: root
     group: root
     mode: 0644

@@ -1,0 +1,12 @@
+---
+- hosts: workstation:localhost
+  pre_tasks:
+    - name: Preflight check for vault material
+      assert:
+        that:
+          - "vault_id is defined"
+          - "vault_password_file is defined"
+        fail_msg: "'vault_id' and 'vault_password_file' must be set"
+      when: inventory_hostname != 'localhost'
+  roles:
+    - pull
