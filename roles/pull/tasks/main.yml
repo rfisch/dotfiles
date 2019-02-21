@@ -1,3 +1,11 @@
 ---
 - name: "Including {{ ansible_distribution }} tasks"
   include_tasks: "{{ ansible_distribution }}.yml"
+
+- name: Add ansible-pull to root crontab
+  cron:
+    name: "dotfiles"
+    minute: "*/15"
+    job: "su -l {{ ansible_user_id }} -c '{{ cron_command }}' >>{{ logfile }} 2>&1"
+    user: root
+  become: yes
