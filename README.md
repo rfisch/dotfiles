@@ -13,6 +13,8 @@ This repository uses [ansible](https://github.com/ansible/ansible) to install do
 The inventory groups and roles are written in such a way where specifying `--limit localhost` bypasses the reading of vaulted material, providing for a generic configuration of various tools and OS-specific package installations.
 
 ```sh
+# optional --vault-id id@/path/to/vault-password
+# optional --ask-become-pass
 ansible-playbook --limit localhost local.yml
 ```
 
@@ -21,6 +23,8 @@ ansible-playbook --limit localhost local.yml
 The [local.yml](local.yml) playbook can also be executed using [ansible-pull](https://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html#ansible-pull) by using the [pull.yml](pull.yml) playbook, which schedules the ansible-pull execution on a cron schedule, allowing for the upstream changes to propogate to the host in an eventually consistent manner. The underlying cron tool used varies by operating system: Arch Linux will rely on [cronie](https://wiki.archlinux.org/index.php/Cron#Cronie_2), while Mac OSX will use the native launchd function.
 
 ```sh
+# optional --vault-id id@/path/to/vault-password
+# optional --ask-become-pass
 ansible-playbook --limit localhost pull.yml
 ```
 
@@ -64,7 +68,9 @@ For those who would enjoy configuring their workstation ssh configuration and gi
 From here, the host variables are picked up by specifying `--limit $(hostname)`:
 
 ```sh
-ansible-playbook --limit $(hostname) local.yml # optional --vault-id id@/path/to/vault-password
+# optional --vault-id id@/path/to/vault-password
+# optional --ask-become-pass
+ansible-playbook --limit $(hostname) local.yml
 ```
 
 ### Ansible Pull
@@ -72,7 +78,9 @@ ansible-playbook --limit $(hostname) local.yml # optional --vault-id id@/path/to
 Similarly, you can again reverse the polarity of ansible's mode and setup a cron schedule to apply the configuration using your hostname variables:
 
 ```sh
-ansible-playbook --limit $(hostname) pull.yml # optional --vault-id id@/path/to/vault-password
+# optional --vault-id id@/path/to/vault-password
+# optional --ask-become-pass
+ansible-playbook --limit $(hostname) pull.yml
 ```
 
 ### Configurations
