@@ -6,18 +6,31 @@
   <string>com.{{ ansible_user_id | regex_replace('\.', '') }}.dotfiles</string>
   <key>ProgramArguments</key>
   <array>
-    <string>/usr/bin/su</string>
-    <string>-l</string>
-    <string>{{ ansible_user_id }}</string>
-    <string>-c</string>
-    <string>{{ cron_command }}</string>
+    <string>/usr/local/bin/ansible-pull</string>
+    <string>-vv</string>
+    <string>-d</string>
+    <string>/tmp/dotfiles</string>
+    <string>-U</string>
+    <string>git://github.com/aglorei/dotfiles.git</string>
+    <string>--limit</string>
+    <string>{{ inventory_hostname }}</string>
+{% if inventory_hostname != 'localhost' %}
+    <string>--vault-id</string>
+    <string>{{ vault_id }}@{{ vault_password_file }}</string>
+{% endif %}
+    <string>--check</string>
+    <string>--diff</string>
   </array>
+  <key>UserName</key>
+  <string>{{ ansible_user_id }}</string>
   <key>StartInterval</key>
   <integer>300</integer>
   <key>EnvironmentVariables</key>
   <dict>
     <key>PATH</key>
     <string>/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+    <key>ANSIBLE_FORCE_COLOR</key>
+    <string>1</string>
   </dict>
   <key>StandardOutPath</key>
   <string>{{ logfile }}</string>
