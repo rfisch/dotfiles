@@ -1,3 +1,5 @@
+localhost             ansible_connection=local
+
 [aglorei-personal]
 lithium               ansible_connection=local
 Tienlongs-MacBook-Pro ansible_connection=local
