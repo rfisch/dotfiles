@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
   <key>Label</key>
-  <string>com.{{ ansible_user_id }}.dotfiles</string>
+  <string>com.{{ ansible_user_id | regex_replace('\.', '') }}.dotfiles</string>
   <key>ProgramArguments</key>
   <array>
     <string>/usr/bin/su</string>
