@@ -3,7 +3,6 @@
   homebrew:
     name: "{{ homebrew['brews'] }}"
     state: present
-  notify: restart-logrotate
 
 - name: Add ansible-pull launchd configuration to root LaunchAgents
   template:
