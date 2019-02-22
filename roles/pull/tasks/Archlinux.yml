@@ -5,13 +5,7 @@
     update_cache: yes
     state: latest
   become: yes
-
-- name: Enable and start cronie
-  systemd:
-    name: cronie
-    enabled: yes
-    state: started
-  become: yes
+  notify: start-cronie
 
 - name: Add ansible-pull to root crontab
   cron:
