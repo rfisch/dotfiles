@@ -1,4 +1,13 @@
 ---
-- name: restart-logrotate
-  shell: |
-    brew services restart logrotate
+- name: start-cronie
+  systemd:
+    name: cronie
+    enabled: yes
+    state: started
+  become: yes
+
+- name: start-launchd
+  launchd:
+    name: "com.{{ ansible_user_id | regex_replace('\\.', '') }}.dotfiles"
+    state: started
+  become: yes

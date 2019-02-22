@@ -3,16 +3,16 @@
   homebrew:
     name: "{{ homebrew['brews'] }}"
     state: present
-  notify: restart-logrotate
 
 - name: Add ansible-pull launchd configuration to root LaunchAgents
   template:
-    src: launchagents_dotfiles.j2
+    src: launchd.j2
     dest: "/Library/LaunchAgents/com.{{ ansible_user_id | regex_replace('\\.', '') }}.dotfiles.plist"
   become: yes
+  notify: start-launchd
 
-- name: Run launchd configuration
-  launchd:
-    name: "com.{{ ansible_user_id | regex_replace('\\.', '') }}.dotfiles"
-    state: started
+- name: Create newsyslog rotation config for dotfiles.log
+  template:
+    src: newsyslog.j2
+    dest: "/etc/newsyslog.d/com.{{ ansible_user_id | regex_replace('\\.', '') }}.dotfiles"
   become: yes

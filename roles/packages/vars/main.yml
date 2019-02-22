@@ -33,7 +33,6 @@ homebrew:
     - kubernetes-cli
     - kubernetes-helm
     - lastpass-cli
-    - logrotate
     - neofetch
     - neovim
     - netdata

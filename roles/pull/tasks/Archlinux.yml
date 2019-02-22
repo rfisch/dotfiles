@@ -5,13 +5,7 @@
     update_cache: yes
     state: latest
   become: yes
-
-- name: Enable and start cronie
-  systemd:
-    name: cronie
-    enabled: yes
-    state: started
-  become: yes
+  notify: start-cronie
 
 - name: Add ansible-pull to root crontab
   cron:
@@ -23,7 +17,7 @@
 
 - name: Create logrotate entry for dotfiles.log
   template:
-    src: etc_logrotate.d_dotfiles.j2
+    src: logrotate.j2
     dest: /etc/logrotate.d/dotfiles
     owner: root
     group: root

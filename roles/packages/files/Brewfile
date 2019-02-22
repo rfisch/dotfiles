@@ -48,8 +48,6 @@ brew "kubernetes-cli"
 brew "kubernetes-helm"
 # LastPass command-line interface tool
 brew "lastpass-cli"
-# Rotates, compresses, and mails system logs
-brew "logrotate", restart_service: true
 # Fast, highly customisable system info script
 brew "neofetch"
 # Ambitious Vim-fork focused on extensibility and agility
