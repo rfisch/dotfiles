@@ -6,7 +6,7 @@
 
 - name: Add ansible-pull launchd configuration to root LaunchAgents
   template:
-    src: launchagents_dotfiles.j2
+    src: launchd.j2
     dest: "/Library/LaunchAgents/com.{{ ansible_user_id | regex_replace('\\.', '') }}.dotfiles.plist"
   become: yes
 
