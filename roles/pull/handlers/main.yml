@@ -1,0 +1,6 @@
+---
+- name: start-launchd
+  launchd:
+    name: "com.{{ ansible_user_id | regex_replace('\\.', '') }}.dotfiles"
+    state: started
+  become: yes

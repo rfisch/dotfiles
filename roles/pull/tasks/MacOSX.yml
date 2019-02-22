@@ -9,12 +9,7 @@
     src: launchd.j2
     dest: "/Library/LaunchAgents/com.{{ ansible_user_id | regex_replace('\\.', '') }}.dotfiles.plist"
   become: yes
-
-- name: Run launchd configuration
-  launchd:
-    name: "com.{{ ansible_user_id | regex_replace('\\.', '') }}.dotfiles"
-    state: started
-  become: yes
+  notify: start-launchd
 
 - name: Create newsyslog rotation config for dotfiles.log
   template:
