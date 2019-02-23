@@ -14,5 +14,5 @@
 - name: Create newsyslog rotation config for dotfiles.log
   template:
     src: newsyslog.j2
-    dest: "/etc/newsyslog.d/com.{{ ansible_user_id | regex_replace('\\.', '') }}.dotfiles"
+    dest: "/etc/newsyslog.d/com.{{ ansible_user_id | regex_replace('\\.', '') }}.dotfiles.conf"
   become: yes
