@@ -36,6 +36,7 @@ homebrew:
     - neofetch
     - neovim
     - netdata
+    - nmap
     - node
     - p7zip
     - packer
@@ -103,6 +104,7 @@ pacman:
     - neofetch
     - neovim
     - netdata
+    - nmap
     - openssh
     - p7zip
     - packer

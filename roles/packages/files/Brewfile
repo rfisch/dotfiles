@@ -54,6 +54,8 @@ brew "neofetch"
 brew "neovim"
 # Distributed real-time performance and health monitoring
 brew "netdata", restart_service: true
+# Port scanning utility for large networks
+brew "nmap"
 # Platform built on V8 to build network applications
 brew "node"
 # 7-Zip (high compression file archiver) implementation
