@@ -53,6 +53,7 @@ homebrew:
     - tty-clock
     - vim
     - wget
+    - wireshark
     - zsh
   brews_with_options:
     koekeishiya/formulae/skhd:
@@ -123,4 +124,5 @@ pacman:
     - vim
     - wget
     - whois
+    - wireshark-cli
     - zsh

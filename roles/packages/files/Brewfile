@@ -90,6 +90,8 @@ brew "tty-clock"
 brew "vim"
 # Internet file retriever
 brew "wget"
+# Graphical network analyzer and capture tool
+brew "wireshark"
 # UNIX shell (command interpreter)
 brew "zsh"
 # Tiling window manager for macOS based on plugin architecture
